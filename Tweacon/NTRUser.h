@@ -10,6 +10,7 @@
 
 @property (strong, nonatomic) NSString *name;
 @property (strong, nonatomic) NSString *imageURL;
+@property (strong, nonatomic) NSString *profileDescription;
 
 - (void)configureWithData:(NSDictionary *)data;
 
