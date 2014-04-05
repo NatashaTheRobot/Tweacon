@@ -7,12 +7,17 @@
 //
 
 #import "NTRAppDelegate.h"
+#import "NTRUser.h"
 
 @implementation NTRAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    // Override point for customization after application launch.
+    [Parse setApplicationId:NTR_PARSE_APPLICATION_ID
+                  clientKey:NTR_PARSE_CLIENT_KEY];
+    [PFAnalytics trackAppOpenedWithLaunchOptions:launchOptions];
+    [NTRUser registerSubclass];
+    
     return YES;
 }
 							

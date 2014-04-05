@@ -14,13 +14,39 @@
 		9C51999818F04CD000CD1015 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C51999718F04CD000CD1015 /* main.m */; };
 		9C51999C18F04CD000CD1015 /* NTRAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C51999B18F04CD000CD1015 /* NTRAppDelegate.m */; };
 		9C51999F18F04CD000CD1015 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9C51999D18F04CD000CD1015 /* Main.storyboard */; };
-		9C5199A218F04CD000CD1015 /* NTRViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C5199A118F04CD000CD1015 /* NTRViewController.m */; };
+		9C5199A218F04CD000CD1015 /* NTRTweaconsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C5199A118F04CD000CD1015 /* NTRTweaconsViewController.m */; };
 		9C5199A418F04CD000CD1015 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9C5199A318F04CD000CD1015 /* Images.xcassets */; };
 		9C5199AB18F04CD100CD1015 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C5199AA18F04CD100CD1015 /* XCTest.framework */; };
 		9C5199AC18F04CD100CD1015 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C51998B18F04CCF00CD1015 /* Foundation.framework */; };
 		9C5199AD18F04CD100CD1015 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C51998F18F04CCF00CD1015 /* UIKit.framework */; };
 		9C5199B518F04CD100CD1015 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9C5199B318F04CD100CD1015 /* InfoPlist.strings */; };
 		9C5199B718F04CD100CD1015 /* TweaconTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C5199B618F04CD100CD1015 /* TweaconTests.m */; };
+		9C5199C818F05C5000CD1015 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C5199C718F05C5000CD1015 /* Parse.framework */; };
+		9C5199CA18F05C6E00CD1015 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C5199C918F05C6E00CD1015 /* AudioToolbox.framework */; };
+		9C5199CC18F05C7900CD1015 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C5199CB18F05C7900CD1015 /* CFNetwork.framework */; };
+		9C5199CE18F05C8500CD1015 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C5199CD18F05C8500CD1015 /* CoreLocation.framework */; };
+		9C5199D018F05C9300CD1015 /* libz.1.1.3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C5199CF18F05C9300CD1015 /* libz.1.1.3.dylib */; };
+		9C5199D218F05C9D00CD1015 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C5199D118F05C9D00CD1015 /* MobileCoreServices.framework */; };
+		9C5199D418F05CA700CD1015 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C5199D318F05CA700CD1015 /* QuartzCore.framework */; };
+		9C5199D618F05CB100CD1015 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C5199D518F05CB100CD1015 /* Security.framework */; };
+		9C5199D818F05CBA00CD1015 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C5199D718F05CBA00CD1015 /* StoreKit.framework */; };
+		9C5199DA18F05CC500CD1015 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C5199D918F05CC500CD1015 /* SystemConfiguration.framework */; };
+		9C5199DE18F05D1900CD1015 /* NTRConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C5199DD18F05D1900CD1015 /* NTRConstants.m */; };
+		9C5199E318F07F8500CD1015 /* NTRUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C5199E218F07F8500CD1015 /* NTRUser.m */; };
+		9C5199E618F0952A00CD1015 /* NTRLoginView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C5199E518F0952A00CD1015 /* NTRLoginView.m */; };
+		9C5199EA18F0963400CD1015 /* NTRLoginView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9C5199E918F0963400CD1015 /* NTRLoginView.xib */; };
+		9C5199F118F09B9F00CD1015 /* NTRTwitterClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C5199F018F09B9F00CD1015 /* NTRTwitterClient.m */; };
+		9C5199F418F0A20D00CD1015 /* NTRConstants+TwitterClientExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C5199F318F0A20D00CD1015 /* NTRConstants+TwitterClientExtensions.m */; };
+		9C5199F718F0A70300CD1015 /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C5199F618F0A70300CD1015 /* Accounts.framework */; };
+		9C5199F918F0A70E00CD1015 /* Twitter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C5199F818F0A70E00CD1015 /* Twitter.framework */; };
+		9C5199FB18F0A71800CD1015 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C5199FA18F0A71800CD1015 /* Social.framework */; };
+		9C519A1618F0B1B100CD1015 /* FBMissingSymbols.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C519A1518F0B1B100CD1015 /* FBMissingSymbols.m */; };
+		9C519A5518F0BD1C00CD1015 /* TWAPIManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C519A5218F0BD1C00CD1015 /* TWAPIManager.m */; };
+		9C519A5618F0BD1C00CD1015 /* TWSignedRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C519A5418F0BD1C00CD1015 /* TWSignedRequest.m */; };
+		9C519A5918F0BD2700CD1015 /* PFTwitterUtils+NativeTwitter.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C519A5818F0BD2700CD1015 /* PFTwitterUtils+NativeTwitter.m */; };
+		9C519A6218F0BDD200CD1015 /* NSData+Base64.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C519A5D18F0BDD200CD1015 /* NSData+Base64.m */; };
+		9C519A6318F0BDD200CD1015 /* OAuth+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C519A5F18F0BDD200CD1015 /* OAuth+Additions.m */; };
+		9C519A6418F0BDD200CD1015 /* OAuthCore.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C519A6118F0BDD200CD1015 /* OAuthCore.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,14 +71,51 @@
 		9C51999A18F04CD000CD1015 /* NTRAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NTRAppDelegate.h; sourceTree = "<group>"; };
 		9C51999B18F04CD000CD1015 /* NTRAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NTRAppDelegate.m; sourceTree = "<group>"; };
 		9C51999E18F04CD000CD1015 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		9C5199A018F04CD000CD1015 /* NTRViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NTRViewController.h; sourceTree = "<group>"; };
-		9C5199A118F04CD000CD1015 /* NTRViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NTRViewController.m; sourceTree = "<group>"; };
+		9C5199A018F04CD000CD1015 /* NTRTweaconsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NTRTweaconsViewController.h; sourceTree = "<group>"; };
+		9C5199A118F04CD000CD1015 /* NTRTweaconsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NTRTweaconsViewController.m; sourceTree = "<group>"; };
 		9C5199A318F04CD000CD1015 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		9C5199A918F04CD100CD1015 /* TweaconTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TweaconTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9C5199AA18F04CD100CD1015 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		9C5199B218F04CD100CD1015 /* TweaconTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "TweaconTests-Info.plist"; sourceTree = "<group>"; };
 		9C5199B418F04CD100CD1015 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		9C5199B618F04CD100CD1015 /* TweaconTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TweaconTests.m; sourceTree = "<group>"; };
+		9C5199C718F05C5000CD1015 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
+		9C5199C918F05C6E00CD1015 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		9C5199CB18F05C7900CD1015 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		9C5199CD18F05C8500CD1015 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		9C5199CF18F05C9300CD1015 /* libz.1.1.3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.1.1.3.dylib; path = usr/lib/libz.1.1.3.dylib; sourceTree = SDKROOT; };
+		9C5199D118F05C9D00CD1015 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		9C5199D318F05CA700CD1015 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		9C5199D518F05CB100CD1015 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		9C5199D718F05CBA00CD1015 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		9C5199D918F05CC500CD1015 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		9C5199DC18F05D1900CD1015 /* NTRConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NTRConstants.h; sourceTree = "<group>"; };
+		9C5199DD18F05D1900CD1015 /* NTRConstants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NTRConstants.m; sourceTree = "<group>"; };
+		9C5199E118F07F8500CD1015 /* NTRUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NTRUser.h; sourceTree = "<group>"; };
+		9C5199E218F07F8500CD1015 /* NTRUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NTRUser.m; sourceTree = "<group>"; };
+		9C5199E418F0952A00CD1015 /* NTRLoginView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NTRLoginView.h; sourceTree = "<group>"; };
+		9C5199E518F0952A00CD1015 /* NTRLoginView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NTRLoginView.m; sourceTree = "<group>"; };
+		9C5199E918F0963400CD1015 /* NTRLoginView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NTRLoginView.xib; sourceTree = "<group>"; };
+		9C5199EF18F09B9F00CD1015 /* NTRTwitterClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NTRTwitterClient.h; sourceTree = "<group>"; };
+		9C5199F018F09B9F00CD1015 /* NTRTwitterClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NTRTwitterClient.m; sourceTree = "<group>"; };
+		9C5199F218F0A20D00CD1015 /* NTRConstants+TwitterClientExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NTRConstants+TwitterClientExtensions.h"; sourceTree = "<group>"; };
+		9C5199F318F0A20D00CD1015 /* NTRConstants+TwitterClientExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NTRConstants+TwitterClientExtensions.m"; sourceTree = "<group>"; };
+		9C5199F618F0A70300CD1015 /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
+		9C5199F818F0A70E00CD1015 /* Twitter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Twitter.framework; path = System/Library/Frameworks/Twitter.framework; sourceTree = SDKROOT; };
+		9C5199FA18F0A71800CD1015 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
+		9C519A1518F0B1B100CD1015 /* FBMissingSymbols.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FBMissingSymbols.m; sourceTree = "<group>"; };
+		9C519A5118F0BD1C00CD1015 /* TWAPIManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TWAPIManager.h; sourceTree = "<group>"; };
+		9C519A5218F0BD1C00CD1015 /* TWAPIManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TWAPIManager.m; sourceTree = "<group>"; };
+		9C519A5318F0BD1C00CD1015 /* TWSignedRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TWSignedRequest.h; sourceTree = "<group>"; };
+		9C519A5418F0BD1C00CD1015 /* TWSignedRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TWSignedRequest.m; sourceTree = "<group>"; };
+		9C519A5718F0BD2700CD1015 /* PFTwitterUtils+NativeTwitter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "PFTwitterUtils+NativeTwitter.h"; sourceTree = "<group>"; };
+		9C519A5818F0BD2700CD1015 /* PFTwitterUtils+NativeTwitter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "PFTwitterUtils+NativeTwitter.m"; sourceTree = "<group>"; };
+		9C519A5C18F0BDD200CD1015 /* NSData+Base64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+Base64.h"; sourceTree = "<group>"; };
+		9C519A5D18F0BDD200CD1015 /* NSData+Base64.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+Base64.m"; sourceTree = "<group>"; };
+		9C519A5E18F0BDD200CD1015 /* OAuth+Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "OAuth+Additions.h"; sourceTree = "<group>"; };
+		9C519A5F18F0BDD200CD1015 /* OAuth+Additions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "OAuth+Additions.m"; sourceTree = "<group>"; };
+		9C519A6018F0BDD200CD1015 /* OAuthCore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OAuthCore.h; sourceTree = "<group>"; };
+		9C519A6118F0BDD200CD1015 /* OAuthCore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OAuthCore.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,8 +123,21 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9C5199FB18F0A71800CD1015 /* Social.framework in Frameworks */,
+				9C5199F918F0A70E00CD1015 /* Twitter.framework in Frameworks */,
+				9C5199F718F0A70300CD1015 /* Accounts.framework in Frameworks */,
+				9C5199DA18F05CC500CD1015 /* SystemConfiguration.framework in Frameworks */,
+				9C5199D818F05CBA00CD1015 /* StoreKit.framework in Frameworks */,
+				9C5199D618F05CB100CD1015 /* Security.framework in Frameworks */,
+				9C5199D418F05CA700CD1015 /* QuartzCore.framework in Frameworks */,
+				9C5199D218F05C9D00CD1015 /* MobileCoreServices.framework in Frameworks */,
+				9C5199D018F05C9300CD1015 /* libz.1.1.3.dylib in Frameworks */,
+				9C5199CE18F05C8500CD1015 /* CoreLocation.framework in Frameworks */,
+				9C5199CC18F05C7900CD1015 /* CFNetwork.framework in Frameworks */,
+				9C5199CA18F05C6E00CD1015 /* AudioToolbox.framework in Frameworks */,
 				9C51998E18F04CCF00CD1015 /* CoreGraphics.framework in Frameworks */,
 				9C51999018F04CCF00CD1015 /* UIKit.framework in Frameworks */,
+				9C5199C818F05C5000CD1015 /* Parse.framework in Frameworks */,
 				9C51998C18F04CCF00CD1015 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -101,6 +177,19 @@
 		9C51998A18F04CCF00CD1015 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				9C5199FA18F0A71800CD1015 /* Social.framework */,
+				9C5199F818F0A70E00CD1015 /* Twitter.framework */,
+				9C5199F618F0A70300CD1015 /* Accounts.framework */,
+				9C5199D918F05CC500CD1015 /* SystemConfiguration.framework */,
+				9C5199D718F05CBA00CD1015 /* StoreKit.framework */,
+				9C5199D518F05CB100CD1015 /* Security.framework */,
+				9C5199D318F05CA700CD1015 /* QuartzCore.framework */,
+				9C5199D118F05C9D00CD1015 /* MobileCoreServices.framework */,
+				9C5199CF18F05C9300CD1015 /* libz.1.1.3.dylib */,
+				9C5199CD18F05C8500CD1015 /* CoreLocation.framework */,
+				9C5199CB18F05C7900CD1015 /* CFNetwork.framework */,
+				9C5199C918F05C6E00CD1015 /* AudioToolbox.framework */,
+				9C5199C718F05C5000CD1015 /* Parse.framework */,
 				9C51998B18F04CCF00CD1015 /* Foundation.framework */,
 				9C51998D18F04CCF00CD1015 /* CoreGraphics.framework */,
 				9C51998F18F04CCF00CD1015 /* UIKit.framework */,
@@ -114,10 +203,14 @@
 			children = (
 				9C51999A18F04CD000CD1015 /* NTRAppDelegate.h */,
 				9C51999B18F04CD000CD1015 /* NTRAppDelegate.m */,
-				9C51999D18F04CD000CD1015 /* Main.storyboard */,
-				9C5199A018F04CD000CD1015 /* NTRViewController.h */,
-				9C5199A118F04CD000CD1015 /* NTRViewController.m */,
+				9C5199DC18F05D1900CD1015 /* NTRConstants.h */,
+				9C5199DD18F05D1900CD1015 /* NTRConstants.m */,
+				9C5199DB18F05CE000CD1015 /* ViewControllers */,
+				9C5199DF18F0792900CD1015 /* Views */,
+				9C5199E018F07B6A00CD1015 /* Models */,
+				9C5199EE18F09B3F00CD1015 /* Networking */,
 				9C5199A318F04CD000CD1015 /* Images.xcassets */,
+				9C5199EB18F0972100CD1015 /* Vendors */,
 				9C51999218F04CD000CD1015 /* Supporting Files */,
 			);
 			path = Tweacon;
@@ -130,6 +223,7 @@
 				9C51999418F04CD000CD1015 /* InfoPlist.strings */,
 				9C51999718F04CD000CD1015 /* main.m */,
 				9C51999918F04CD000CD1015 /* Tweacon-Prefix.pch */,
+				9C519A1518F0B1B100CD1015 /* FBMissingSymbols.m */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -150,6 +244,105 @@
 				9C5199B318F04CD100CD1015 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		9C5199DB18F05CE000CD1015 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				9C5199A018F04CD000CD1015 /* NTRTweaconsViewController.h */,
+				9C5199A118F04CD000CD1015 /* NTRTweaconsViewController.m */,
+			);
+			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		9C5199DF18F0792900CD1015 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				9C5199E718F095F800CD1015 /* storyboards */,
+				9C5199E818F0960000CD1015 /* nibs */,
+				9C5199E418F0952A00CD1015 /* NTRLoginView.h */,
+				9C5199E518F0952A00CD1015 /* NTRLoginView.m */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		9C5199E018F07B6A00CD1015 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				9C5199E118F07F8500CD1015 /* NTRUser.h */,
+				9C5199E218F07F8500CD1015 /* NTRUser.m */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		9C5199E718F095F800CD1015 /* storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				9C51999D18F04CD000CD1015 /* Main.storyboard */,
+			);
+			name = storyboards;
+			sourceTree = "<group>";
+		};
+		9C5199E818F0960000CD1015 /* nibs */ = {
+			isa = PBXGroup;
+			children = (
+				9C5199E918F0963400CD1015 /* NTRLoginView.xib */,
+			);
+			name = nibs;
+			sourceTree = "<group>";
+		};
+		9C5199EB18F0972100CD1015 /* Vendors */ = {
+			isa = PBXGroup;
+			children = (
+				9C519A5B18F0BDD200CD1015 /* ABOAuthCore */,
+				9C519A5718F0BD2700CD1015 /* PFTwitterUtils+NativeTwitter.h */,
+				9C519A5818F0BD2700CD1015 /* PFTwitterUtils+NativeTwitter.m */,
+				9C519A5018F0BD1C00CD1015 /* TwitterReverseAuth */,
+			);
+			name = Vendors;
+			sourceTree = "<group>";
+		};
+		9C5199EE18F09B3F00CD1015 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				9C5199EF18F09B9F00CD1015 /* NTRTwitterClient.h */,
+				9C5199F018F09B9F00CD1015 /* NTRTwitterClient.m */,
+				9C5199F518F0A23000CD1015 /* Helpers */,
+			);
+			name = Networking;
+			sourceTree = "<group>";
+		};
+		9C5199F518F0A23000CD1015 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				9C5199F218F0A20D00CD1015 /* NTRConstants+TwitterClientExtensions.h */,
+				9C5199F318F0A20D00CD1015 /* NTRConstants+TwitterClientExtensions.m */,
+			);
+			name = Helpers;
+			sourceTree = "<group>";
+		};
+		9C519A5018F0BD1C00CD1015 /* TwitterReverseAuth */ = {
+			isa = PBXGroup;
+			children = (
+				9C519A5118F0BD1C00CD1015 /* TWAPIManager.h */,
+				9C519A5218F0BD1C00CD1015 /* TWAPIManager.m */,
+				9C519A5318F0BD1C00CD1015 /* TWSignedRequest.h */,
+				9C519A5418F0BD1C00CD1015 /* TWSignedRequest.m */,
+			);
+			path = TwitterReverseAuth;
+			sourceTree = "<group>";
+		};
+		9C519A5B18F0BDD200CD1015 /* ABOAuthCore */ = {
+			isa = PBXGroup;
+			children = (
+				9C519A5C18F0BDD200CD1015 /* NSData+Base64.h */,
+				9C519A5D18F0BDD200CD1015 /* NSData+Base64.m */,
+				9C519A5E18F0BDD200CD1015 /* OAuth+Additions.h */,
+				9C519A5F18F0BDD200CD1015 /* OAuth+Additions.m */,
+				9C519A6018F0BDD200CD1015 /* OAuthCore.h */,
+				9C519A6118F0BDD200CD1015 /* OAuthCore.m */,
+			);
+			path = ABOAuthCore;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -230,6 +423,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9C5199A418F04CD000CD1015 /* Images.xcassets in Resources */,
+				9C5199EA18F0963400CD1015 /* NTRLoginView.xib in Resources */,
 				9C51999618F04CD000CD1015 /* InfoPlist.strings in Resources */,
 				9C51999F18F04CD000CD1015 /* Main.storyboard in Resources */,
 			);
@@ -251,8 +445,20 @@
 			buildActionMask = 2147483647;
 			files = (
 				9C51999818F04CD000CD1015 /* main.m in Sources */,
+				9C5199E318F07F8500CD1015 /* NTRUser.m in Sources */,
 				9C51999C18F04CD000CD1015 /* NTRAppDelegate.m in Sources */,
-				9C5199A218F04CD000CD1015 /* NTRViewController.m in Sources */,
+				9C5199F118F09B9F00CD1015 /* NTRTwitterClient.m in Sources */,
+				9C519A5618F0BD1C00CD1015 /* TWSignedRequest.m in Sources */,
+				9C5199DE18F05D1900CD1015 /* NTRConstants.m in Sources */,
+				9C519A6418F0BDD200CD1015 /* OAuthCore.m in Sources */,
+				9C519A5518F0BD1C00CD1015 /* TWAPIManager.m in Sources */,
+				9C519A6318F0BDD200CD1015 /* OAuth+Additions.m in Sources */,
+				9C519A5918F0BD2700CD1015 /* PFTwitterUtils+NativeTwitter.m in Sources */,
+				9C5199A218F04CD000CD1015 /* NTRTweaconsViewController.m in Sources */,
+				9C519A1618F0B1B100CD1015 /* FBMissingSymbols.m in Sources */,
+				9C5199E618F0952A00CD1015 /* NTRLoginView.m in Sources */,
+				9C519A6218F0BDD200CD1015 /* NSData+Base64.m in Sources */,
+				9C5199F418F0A20D00CD1015 /* NTRConstants+TwitterClientExtensions.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -377,9 +583,18 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Tweacon/Tweacon-Prefix.pch";
+				"HEADER_SEARCH_PATHS[arch=*]" = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+				);
 				INFOPLIST_FILE = "Tweacon/Tweacon-Info.plist";
+				"OTHER_LDFLAGS[arch=*]" = "-all_load";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -390,9 +605,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Tweacon/Tweacon-Prefix.pch";
 				INFOPLIST_FILE = "Tweacon/Tweacon-Info.plist";
+				"OTHER_LDFLAGS[arch=*]" = "-all_load";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -457,6 +677,7 @@
 				9C5199BC18F04CD100CD1015 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		9C5199BD18F04CD100CD1015 /* Build configuration list for PBXNativeTarget "TweaconTests" */ = {
 			isa = XCConfigurationList;
@@ -465,6 +686,7 @@
 				9C5199BF18F04CD100CD1015 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
