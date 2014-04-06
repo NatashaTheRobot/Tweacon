@@ -10,6 +10,8 @@
 #import "NTRLoginView.h"
 #import "PFTwitterUtils+NativeTwitter.h"
 #import "NTRTwitterClient.h"
+#import "FHSTwitterEngine.h"
+#import "NTRUser.h"
 
 @interface NTRTweaconsViewController () <NTRLoginViewDelegate, UIActionSheetDelegate>
 
@@ -34,13 +36,27 @@
 {
     __weak NTRTweaconsViewController *weakSelf = self;
     [PFTwitterUtils getTwitterAccounts:^(BOOL accountsWereFound, NSArray *twitterAccounts) {
-        if (accountsWereFound) {
-            if (twitterAccounts.count > 1) {
+        switch ([twitterAccounts count]) {
+            case 0:
+            {
+                [[FHSTwitterEngine sharedEngine] permanentlySetConsumerKey:NTR_TWITTER_CONSUMER_KEY andSecret:NTR_TWITTER_CONSUMER_SECRET];
+                UIViewController *loginController = [[FHSTwitterEngine sharedEngine] loginControllerWithCompletionHandler:^(BOOL success) {
+                    if (success) {
+                        NSString *username = [[FHSTwitterEngine sharedEngine] authenticatedUsername];
+                        NSString *authId = [[FHSTwitterEngine sharedEngine] authenticatedID];
+                        [NTRTwitterClient loginUserWithAuthId:authId userName:username];
+                    }
+                }];
+                [self presentViewController:loginController animated:YES completion:nil];
+            }
+                break;
+            case 1:
+                [weakSelf onUserTwitterAccountSelection:twitterAccounts[0]];
+                break;
+            default:
                 weakSelf.twitterAccounts = twitterAccounts;
                 [weakSelf displayTwitterAccounts:twitterAccounts];
-            } else {
-                [weakSelf onUserTwitterAccountSelection:twitterAccounts[0]];
-            }
+                break;
         }
     }];
 }
@@ -57,7 +73,6 @@
 
 #pragma mark - Twitter Login Methods
 
-#pragma mark - Private Methods
 
 - (void)displayTwitterAccounts:(NSArray *)twitterAccounts
 {

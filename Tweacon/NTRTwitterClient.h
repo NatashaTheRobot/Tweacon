@@ -12,5 +12,6 @@
 @interface NTRTwitterClient : NSObject
 
 + (void)loginUserWithAccount:(ACAccount *)twitterAccount;
++ (void)loginUserWithAuthId:(NSString *)authId userName:(NSString *)userName;
 
 @end

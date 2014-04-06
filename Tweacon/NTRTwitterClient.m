@@ -10,6 +10,7 @@
 #import "PFTwitterUtils+NativeTwitter.h"
 #import "NTRUser.h"
 #import <Accounts/Accounts.h>
+#import "FHSTwitterEngine.h"
 
 @implementation NTRTwitterClient
 
@@ -18,22 +19,56 @@
     [PFTwitterUtils initializeWithConsumerKey:NTR_TWITTER_CONSUMER_KEY consumerSecret:NTR_TWITTER_CONSUMER_SECRET];
     
     [PFTwitterUtils setNativeLogInSuccessBlock:^(PFUser *parseUser, NSString *userTwitterId, NSError *error) {
-        [[NSNotificationCenter defaultCenter] postNotificationName:NTRNotificationTwitterLoginSuccess object:nil];
-        [self fetchDataForUser:(NTRUser *)parseUser userName:[twitterAccount username]];
+        parseUser.username = [twitterAccount username];
+        [self onLoginSuccess:parseUser];
     }];
     
     [PFTwitterUtils setNativeLogInErrorBlock:^(TwitterLogInError logInError) {
-        [[NSNotificationCenter defaultCenter] postNotificationName:NTRNotificationTwitterLoginFailure object:@(logInError)];
+        NSError *error = [[NSError alloc] initWithDomain:nil code:logInError userInfo:@{@"logInErrorCode" : @(logInError)}];
+        [self onLoginFailure:error];
     }];
     
     [PFTwitterUtils logInWithAccount:twitterAccount];
 }
 
++ (void)loginUserWithAuthId:(NSString *)authId userName:(NSString *)userName
+{
+    [PFTwitterUtils initializeWithConsumerKey:NTR_TWITTER_CONSUMER_KEY consumerSecret:NTR_TWITTER_CONSUMER_SECRET];
+    
+    FHSTwitterEngine *twitterEngine = [FHSTwitterEngine sharedEngine];
+    FHSToken *token = [FHSTwitterEngine sharedEngine].accessToken;
+    
+    [PFTwitterUtils logInWithTwitterId:twitterEngine.authenticatedID
+                            screenName:twitterEngine.authenticatedUsername
+                             authToken:token.key
+                       authTokenSecret:token.secret
+                                 block:^(PFUser *user, NSError *error) {
+                                     if (user) {
+                                         user.username = twitterEngine.authenticatedUsername;
+                                         [self onLoginSuccess:user];
+                                     } else {
+                                         [self onLoginFailure:error];
+                                     }
+    }];
+}
+
 #pragma mark - Private
 
-+ (void)fetchDataForUser:(NTRUser *)user userName:(NSString *)username
++ (void)onLoginSuccess:(PFUser *)user
 {
-    NSString * requestString = [NSString stringWithFormat:@"https://api.twitter.com/1.1/users/show.json?screen_name=%@", username];
+    [user saveInBackground];
+    [[NSNotificationCenter defaultCenter] postNotificationName:NTRNotificationTwitterLoginSuccess object:nil];
+    [self fetchDataForUser:(NTRUser *)user];
+}
+
++ (void)onLoginFailure:(NSError *)error
+{
+    [[NSNotificationCenter defaultCenter] postNotificationName:NTRNotificationTwitterLoginFailure object:error];
+}
+
++ (void)fetchDataForUser:(NTRUser *)user
+{
+    NSString * requestString = [NSString stringWithFormat:@"https://api.twitter.com/1.1/users/show.json?screen_name=%@", user.username];
     
     NSURL *verify = [NSURL URLWithString:requestString];
     NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:verify];
