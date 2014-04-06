@@ -149,7 +149,7 @@ TwitterLogInErrorBlock _nativeLogInErrorBlock;
         });
     }
     else {
-        [PFTwitterUtils showDefaultErrorAlert:error];
+//        [PFTwitterUtils showDefaultErrorAlert:error];
     }
 }
 

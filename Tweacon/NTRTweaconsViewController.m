@@ -36,28 +36,7 @@
 {
     __weak NTRTweaconsViewController *weakSelf = self;
     [PFTwitterUtils getTwitterAccounts:^(BOOL accountsWereFound, NSArray *twitterAccounts) {
-        switch ([twitterAccounts count]) {
-            case 0:
-            {
-                [[FHSTwitterEngine sharedEngine] permanentlySetConsumerKey:NTR_TWITTER_CONSUMER_KEY andSecret:NTR_TWITTER_CONSUMER_SECRET];
-                UIViewController *loginController = [[FHSTwitterEngine sharedEngine] loginControllerWithCompletionHandler:^(BOOL success) {
-                    if (success) {
-                        NSString *username = [[FHSTwitterEngine sharedEngine] authenticatedUsername];
-                        NSString *authId = [[FHSTwitterEngine sharedEngine] authenticatedID];
-                        [NTRTwitterClient loginUserWithAuthId:authId userName:username];
-                    }
-                }];
-                [self presentViewController:loginController animated:YES completion:nil];
-            }
-                break;
-            case 1:
-                [weakSelf onUserTwitterAccountSelection:twitterAccounts[0]];
-                break;
-            default:
-                weakSelf.twitterAccounts = twitterAccounts;
-                [weakSelf displayTwitterAccounts:twitterAccounts];
-                break;
-        }
+        [weakSelf handleTwitterAccounts:twitterAccounts];
     }];
 }
 
@@ -73,6 +52,32 @@
 
 #pragma mark - Twitter Login Methods
 
+- (void)handleTwitterAccounts:(NSArray *)twitterAccounts
+{
+    switch ([twitterAccounts count]) {
+        case 0:
+        {
+            [[FHSTwitterEngine sharedEngine] permanentlySetConsumerKey:NTR_TWITTER_CONSUMER_KEY andSecret:NTR_TWITTER_CONSUMER_SECRET];
+            UIViewController *loginController = [[FHSTwitterEngine sharedEngine] loginControllerWithCompletionHandler:^(BOOL success) {
+                if (success) {
+                    NSString *username = [[FHSTwitterEngine sharedEngine] authenticatedUsername];
+                    NSString *authId = [[FHSTwitterEngine sharedEngine] authenticatedID];
+                    [NTRTwitterClient loginUserWithAuthId:authId userName:username];
+                }
+            }];
+            [self presentViewController:loginController animated:YES completion:nil];
+        }
+            break;
+        case 1:
+            [self onUserTwitterAccountSelection:twitterAccounts[0]];
+            break;
+        default:
+            self.twitterAccounts = twitterAccounts;
+            [self displayTwitterAccounts:twitterAccounts];
+            break;
+    }
+
+}
 
 - (void)displayTwitterAccounts:(NSArray *)twitterAccounts
 {
