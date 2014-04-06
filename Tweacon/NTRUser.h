@@ -8,6 +8,7 @@
 
 @interface NTRUser : PFUser <PFSubclassing>
 
+@property (strong, nonatomic) NSString *screenName;
 @property (strong, nonatomic) NSString *name;
 @property (strong, nonatomic) NSString *imageURL;
 @property (strong, nonatomic) NSString *profileDescription;

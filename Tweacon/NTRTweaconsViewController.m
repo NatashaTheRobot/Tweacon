@@ -17,9 +17,20 @@
 
 @property (strong, nonatomic) NSArray *twitterAccounts;
 
+@property (weak, nonatomic) NTRLoginView *loginView;
+
 @end
 
 @implementation NTRTweaconsViewController
+
+- (id)initWithCoder:(NSCoder *)aDecoder
+{
+    self = [super initWithCoder:aDecoder];
+    if (self) {
+        [self registerForNotifications];
+    }
+    return self;
+}
 
 - (void)viewDidLoad
 {
@@ -28,6 +39,11 @@
     if (![PFUser currentUser]) {
         [self addLoginView];
     }
+}
+
+- (void)dealloc
+{
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
 
 #pragma mark - LoginViewDelegate
@@ -40,14 +56,34 @@
     }];
 }
 
+#pragma mark - Handle Twitter Login
+
+- (void)onTwitterLoginSuccess:(id)notification
+{
+    [self.loginView removeFromSuperview];
+    //    [[NSUserDefaults standardUserDefaults] setObject:[twitterAccount username] forKey:@"username"];
+    // start beaconing
+}
+
+- (void)onTwitterLoginFailure:(id)notification
+{
+    
+}
+
 #pragma mark - Private Configuration Methods
+
+- (void)registerForNotifications
+{
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(onTwitterLoginSuccess:) name:NTRNotificationTwitterLoginSuccess object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(onTwitterLoginFailure:) name:NTRNotificationTwitterLoginFailure object:nil];
+}
 
 - (void)addLoginView
 {
-    NTRLoginView *loginView = [[NSBundle mainBundle] loadNibNamed:@"NTRLoginView" owner:self options:nil][0];
-    loginView.delegate = self;
-    loginView.frame = CGRectMake(0, 300, loginView.frame.size.width, loginView.frame.size.height);
-    [self.view addSubview:loginView];
+    self.loginView = [[NSBundle mainBundle] loadNibNamed:@"NTRLoginView" owner:self options:nil][0];
+    self.loginView.delegate = self;
+    self.loginView.frame = CGRectMake(0, 300, self.loginView.frame.size.width, self.loginView.frame.size.height);
+    [self.view addSubview:self.loginView];
 }
 
 #pragma mark - Twitter Login Methods
@@ -60,9 +96,7 @@
             [[FHSTwitterEngine sharedEngine] permanentlySetConsumerKey:NTR_TWITTER_CONSUMER_KEY andSecret:NTR_TWITTER_CONSUMER_SECRET];
             UIViewController *loginController = [[FHSTwitterEngine sharedEngine] loginControllerWithCompletionHandler:^(BOOL success) {
                 if (success) {
-                    NSString *username = [[FHSTwitterEngine sharedEngine] authenticatedUsername];
-                    NSString *authId = [[FHSTwitterEngine sharedEngine] authenticatedID];
-                    [NTRTwitterClient loginUserWithAuthId:authId userName:username];
+                    [NTRTwitterClient loginUserWithTwitterEngine];
                 }
             }];
             [self presentViewController:loginController animated:YES completion:nil];
@@ -99,8 +133,6 @@
 - (void)onUserTwitterAccountSelection:(ACAccount *)twitterAccount
 {
     [NTRTwitterClient loginUserWithAccount:twitterAccount];
-//    [[NSUserDefaults standardUserDefaults] setObject:[twitterAccount username] forKey:@"username"];
-    // start beaconing
 }
 
 #pragma mark - UIActionSheetDelegate Methods

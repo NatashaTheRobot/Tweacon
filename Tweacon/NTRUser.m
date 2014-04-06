@@ -14,13 +14,14 @@
 
 @implementation NTRUser
 
+@dynamic screenName;
 @dynamic name;
 @dynamic imageURL;
 @dynamic profileDescription;
 
 - (void)configureWithData:(NSDictionary *)data
 {
-    self.username = data[@"screen_name"];
+    self.screenName = data[@"screen_name"];
     self.name= data[@"name"];
     self.profileDescription = data[@"description"];
     self.imageURL = [data[@"profile_image_url_https"] stringByReplacingOccurrencesOfString:@"_normal" withString:@"_bigger"];

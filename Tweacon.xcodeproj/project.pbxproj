@@ -352,9 +352,9 @@
 		9C519A6718F0CE5800CD1015 /* PFTwitterUtils+NativeTwitter */ = {
 			isa = PBXGroup;
 			children = (
-				9C519A5B18F0BDD200CD1015 /* ABOAuthCore */,
 				9C519A5718F0BD2700CD1015 /* PFTwitterUtils+NativeTwitter.h */,
 				9C519A5818F0BD2700CD1015 /* PFTwitterUtils+NativeTwitter.m */,
+				9C519A5B18F0BDD200CD1015 /* ABOAuthCore */,
 				9C519A5018F0BD1C00CD1015 /* TwitterReverseAuth */,
 			);
 			name = "PFTwitterUtils+NativeTwitter";

@@ -19,7 +19,7 @@
     [PFTwitterUtils initializeWithConsumerKey:NTR_TWITTER_CONSUMER_KEY consumerSecret:NTR_TWITTER_CONSUMER_SECRET];
     
     [PFTwitterUtils setNativeLogInSuccessBlock:^(PFUser *parseUser, NSString *userTwitterId, NSError *error) {
-        parseUser.username = [twitterAccount username];
+        ((NTRUser *)parseUser).screenName = [twitterAccount username];
         [self onLoginSuccess:parseUser];
     }];
     
@@ -31,7 +31,7 @@
     [PFTwitterUtils logInWithAccount:twitterAccount];
 }
 
-+ (void)loginUserWithAuthId:(NSString *)authId userName:(NSString *)userName
++ (void)loginUserWithTwitterEngine
 {
     [PFTwitterUtils initializeWithConsumerKey:NTR_TWITTER_CONSUMER_KEY consumerSecret:NTR_TWITTER_CONSUMER_SECRET];
     
@@ -44,7 +44,7 @@
                        authTokenSecret:token.secret
                                  block:^(PFUser *user, NSError *error) {
                                      if (user) {
-                                         user.username = twitterEngine.authenticatedUsername;
+                                         ((NTRUser *)user).screenName = twitterEngine.authenticatedUsername;
                                          [self onLoginSuccess:user];
                                      } else {
                                          [self onLoginFailure:error];
@@ -57,7 +57,7 @@
 + (void)onLoginSuccess:(PFUser *)user
 {
     [user saveInBackground];
-    [[NSNotificationCenter defaultCenter] postNotificationName:NTRNotificationTwitterLoginSuccess object:nil];
+    [[NSNotificationCenter defaultCenter] postNotificationName:NTRNotificationTwitterLoginSuccess object:user];
     [self fetchDataForUser:(NTRUser *)user];
 }
 
@@ -68,7 +68,7 @@
 
 + (void)fetchDataForUser:(NTRUser *)user
 {
-    NSString * requestString = [NSString stringWithFormat:@"https://api.twitter.com/1.1/users/show.json?screen_name=%@", user.username];
+    NSString * requestString = [NSString stringWithFormat:@"https://api.twitter.com/1.1/users/show.json?screen_name=%@", user.screenName];
     
     NSURL *verify = [NSURL URLWithString:requestString];
     NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:verify];
@@ -77,7 +77,7 @@
     [NSURLConnection sendAsynchronousRequest:request queue:[NSOperationQueue mainQueue] completionHandler:^(NSURLResponse *response, NSData *data, NSError *connectionError) {
         NSError *error;
         NSDictionary* result = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingAllowFragments error:&error];
-        if (!error) {
+        if (result) {
             [user configureWithData:result];
             [user saveEventually];
         }
