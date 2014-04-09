@@ -8,6 +8,7 @@
 
 #import "NTRAppDelegate.h"
 #import "NTRUser.h"
+#import "NTRNearbyServicesManager.h"
 
 @implementation NTRAppDelegate
 
@@ -18,6 +19,7 @@
     [PFAnalytics trackAppOpenedWithLaunchOptions:launchOptions];
     [NTRUser registerSubclass];
     
+    [[NTRNearbyServicesManager sharedManager] start];
     return YES;
 }
 							
