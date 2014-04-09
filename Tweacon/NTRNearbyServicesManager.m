@@ -102,7 +102,7 @@ didReceiveInvitationFromPeer:(MCPeerID *)peerID
         user.imageURL = info[@"imageURL"];
         
         [self.nearbyUsers addObject:user];
-        //send notification with new user
+        [[NSNotificationCenter defaultCenter] postNotificationName:NTRNotificationMultipeerConnectivityUserAdded object:nil];
     }
 }
 
@@ -117,7 +117,7 @@ didReceiveInvitationFromPeer:(MCPeerID *)peerID
     NSArray *nearbyUsers = [self.nearbyUsers filteredArrayUsingPredicate:filter];
     if ([nearbyUsers count] > 0) {
         [self.nearbyUsers removeObject:nearbyUsers[0]];
-        // send notification that user was removed
+        [[NSNotificationCenter defaultCenter] postNotificationName:NTRNotificationMultipeerConnectivityUserRemoved object:nil];
     }
 }
 

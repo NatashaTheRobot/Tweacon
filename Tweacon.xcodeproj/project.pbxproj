@@ -14,7 +14,7 @@
 		9C51999818F04CD000CD1015 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C51999718F04CD000CD1015 /* main.m */; };
 		9C51999C18F04CD000CD1015 /* NTRAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C51999B18F04CD000CD1015 /* NTRAppDelegate.m */; };
 		9C51999F18F04CD000CD1015 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9C51999D18F04CD000CD1015 /* Main.storyboard */; };
-		9C5199A218F04CD000CD1015 /* NTRTweaconsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C5199A118F04CD000CD1015 /* NTRTweaconsViewController.m */; };
+		9C5199A218F04CD000CD1015 /* NTRLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C5199A118F04CD000CD1015 /* NTRLoginViewController.m */; };
 		9C5199A418F04CD000CD1015 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9C5199A318F04CD000CD1015 /* Images.xcassets */; };
 		9C5199AB18F04CD100CD1015 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C5199AA18F04CD100CD1015 /* XCTest.framework */; };
 		9C5199AC18F04CD100CD1015 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C51998B18F04CCF00CD1015 /* Foundation.framework */; };
@@ -32,8 +32,6 @@
 		9C5199D818F05CBA00CD1015 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C5199D718F05CBA00CD1015 /* StoreKit.framework */; };
 		9C5199DA18F05CC500CD1015 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C5199D918F05CC500CD1015 /* SystemConfiguration.framework */; };
 		9C5199E318F07F8500CD1015 /* NTRUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C5199E218F07F8500CD1015 /* NTRUser.m */; };
-		9C5199E618F0952A00CD1015 /* NTRLoginView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C5199E518F0952A00CD1015 /* NTRLoginView.m */; };
-		9C5199EA18F0963400CD1015 /* NTRLoginView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9C5199E918F0963400CD1015 /* NTRLoginView.xib */; };
 		9C5199F118F09B9F00CD1015 /* NTRTwitterClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C5199F018F09B9F00CD1015 /* NTRTwitterClient.m */; };
 		9C5199F418F0A20D00CD1015 /* NTRConstants+TwitterClientExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C5199F318F0A20D00CD1015 /* NTRConstants+TwitterClientExtensions.m */; };
 		9C5199F718F0A70300CD1015 /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C5199F618F0A70300CD1015 /* Accounts.framework */; };
@@ -51,6 +49,7 @@
 		9C519A6E18F0CF2100CD1015 /* FHSStream.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C519A6D18F0CF2100CD1015 /* FHSStream.m */; };
 		9C519AF718F58D0F00CD1015 /* NTRNearbyServicesManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C519AF618F58D0F00CD1015 /* NTRNearbyServicesManager.m */; };
 		9C519AFA18F58D3900CD1015 /* MultipeerConnectivity.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C519AF918F58D3900CD1015 /* MultipeerConnectivity.framework */; };
+		9C519AFD18F5989200CD1015 /* NTRConstants+MultipeerExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C519AFC18F5989200CD1015 /* NTRConstants+MultipeerExtensions.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -75,8 +74,8 @@
 		9C51999A18F04CD000CD1015 /* NTRAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NTRAppDelegate.h; sourceTree = "<group>"; };
 		9C51999B18F04CD000CD1015 /* NTRAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NTRAppDelegate.m; sourceTree = "<group>"; };
 		9C51999E18F04CD000CD1015 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		9C5199A018F04CD000CD1015 /* NTRTweaconsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NTRTweaconsViewController.h; sourceTree = "<group>"; };
-		9C5199A118F04CD000CD1015 /* NTRTweaconsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NTRTweaconsViewController.m; sourceTree = "<group>"; };
+		9C5199A018F04CD000CD1015 /* NTRLoginViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NTRLoginViewController.h; sourceTree = "<group>"; };
+		9C5199A118F04CD000CD1015 /* NTRLoginViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NTRLoginViewController.m; sourceTree = "<group>"; };
 		9C5199A318F04CD000CD1015 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		9C5199A918F04CD100CD1015 /* TweaconTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TweaconTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9C5199AA18F04CD100CD1015 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
@@ -96,9 +95,6 @@
 		9C5199DC18F05D1900CD1015 /* NTRConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NTRConstants.h; sourceTree = "<group>"; };
 		9C5199E118F07F8500CD1015 /* NTRUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NTRUser.h; sourceTree = "<group>"; };
 		9C5199E218F07F8500CD1015 /* NTRUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NTRUser.m; sourceTree = "<group>"; };
-		9C5199E418F0952A00CD1015 /* NTRLoginView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NTRLoginView.h; sourceTree = "<group>"; };
-		9C5199E518F0952A00CD1015 /* NTRLoginView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NTRLoginView.m; sourceTree = "<group>"; };
-		9C5199E918F0963400CD1015 /* NTRLoginView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NTRLoginView.xib; sourceTree = "<group>"; };
 		9C5199EF18F09B9F00CD1015 /* NTRTwitterClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NTRTwitterClient.h; sourceTree = "<group>"; };
 		9C5199F018F09B9F00CD1015 /* NTRTwitterClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NTRTwitterClient.m; sourceTree = "<group>"; };
 		9C5199F218F0A20D00CD1015 /* NTRConstants+TwitterClientExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NTRConstants+TwitterClientExtensions.h"; sourceTree = "<group>"; };
@@ -127,6 +123,8 @@
 		9C519AF518F58D0F00CD1015 /* NTRNearbyServicesManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NTRNearbyServicesManager.h; sourceTree = "<group>"; };
 		9C519AF618F58D0F00CD1015 /* NTRNearbyServicesManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NTRNearbyServicesManager.m; sourceTree = "<group>"; };
 		9C519AF918F58D3900CD1015 /* MultipeerConnectivity.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MultipeerConnectivity.framework; path = System/Library/Frameworks/MultipeerConnectivity.framework; sourceTree = SDKROOT; };
+		9C519AFB18F5989200CD1015 /* NTRConstants+MultipeerExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NTRConstants+MultipeerExtensions.h"; sourceTree = "<group>"; };
+		9C519AFC18F5989200CD1015 /* NTRConstants+MultipeerExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NTRConstants+MultipeerExtensions.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -263,8 +261,8 @@
 		9C5199DB18F05CE000CD1015 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				9C5199A018F04CD000CD1015 /* NTRTweaconsViewController.h */,
-				9C5199A118F04CD000CD1015 /* NTRTweaconsViewController.m */,
+				9C5199A018F04CD000CD1015 /* NTRLoginViewController.h */,
+				9C5199A118F04CD000CD1015 /* NTRLoginViewController.m */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -273,9 +271,6 @@
 			isa = PBXGroup;
 			children = (
 				9C5199E718F095F800CD1015 /* storyboards */,
-				9C5199E818F0960000CD1015 /* nibs */,
-				9C5199E418F0952A00CD1015 /* NTRLoginView.h */,
-				9C5199E518F0952A00CD1015 /* NTRLoginView.m */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -295,14 +290,6 @@
 				9C51999D18F04CD000CD1015 /* Main.storyboard */,
 			);
 			name = storyboards;
-			sourceTree = "<group>";
-		};
-		9C5199E818F0960000CD1015 /* nibs */ = {
-			isa = PBXGroup;
-			children = (
-				9C5199E918F0963400CD1015 /* NTRLoginView.xib */,
-			);
-			name = nibs;
 			sourceTree = "<group>";
 		};
 		9C5199EB18F0972100CD1015 /* Vendors */ = {
@@ -382,10 +369,20 @@
 		9C519AF818F58D1600CD1015 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
-				9C519AF518F58D0F00CD1015 /* NTRNearbyServicesManager.h */,
-				9C519AF618F58D0F00CD1015 /* NTRNearbyServicesManager.m */,
+				9C519AFE18F598C100CD1015 /* Multipeer Connectivity */,
 			);
 			name = Helpers;
+			sourceTree = "<group>";
+		};
+		9C519AFE18F598C100CD1015 /* Multipeer Connectivity */ = {
+			isa = PBXGroup;
+			children = (
+				9C519AF518F58D0F00CD1015 /* NTRNearbyServicesManager.h */,
+				9C519AF618F58D0F00CD1015 /* NTRNearbyServicesManager.m */,
+				9C519AFB18F5989200CD1015 /* NTRConstants+MultipeerExtensions.h */,
+				9C519AFC18F5989200CD1015 /* NTRConstants+MultipeerExtensions.m */,
+			);
+			name = "Multipeer Connectivity";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -466,7 +463,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				9C5199A418F04CD000CD1015 /* Images.xcassets in Resources */,
-				9C5199EA18F0963400CD1015 /* NTRLoginView.xib in Resources */,
 				9C51999618F04CD000CD1015 /* InfoPlist.strings in Resources */,
 				9C51999F18F04CD000CD1015 /* Main.storyboard in Resources */,
 			);
@@ -497,11 +493,11 @@
 				9C519A6B18F0CE8300CD1015 /* FHSTwitterEngine.m in Sources */,
 				9C519A6318F0BDD200CD1015 /* OAuth+Additions.m in Sources */,
 				9C519A5918F0BD2700CD1015 /* PFTwitterUtils+NativeTwitter.m in Sources */,
+				9C519AFD18F5989200CD1015 /* NTRConstants+MultipeerExtensions.m in Sources */,
 				9C519A6618F0CDA400CD1015 /* NTRConstants.m in Sources */,
 				9C519AF718F58D0F00CD1015 /* NTRNearbyServicesManager.m in Sources */,
-				9C5199A218F04CD000CD1015 /* NTRTweaconsViewController.m in Sources */,
+				9C5199A218F04CD000CD1015 /* NTRLoginViewController.m in Sources */,
 				9C519A1618F0B1B100CD1015 /* FBMissingSymbols.m in Sources */,
-				9C5199E618F0952A00CD1015 /* NTRLoginView.m in Sources */,
 				9C519A6218F0BDD200CD1015 /* NSData+Base64.m in Sources */,
 				9C519A6E18F0CF2100CD1015 /* FHSStream.m in Sources */,
 				9C5199F418F0A20D00CD1015 /* NTRConstants+TwitterClientExtensions.m in Sources */,

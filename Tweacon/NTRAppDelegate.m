@@ -19,7 +19,13 @@
     [PFAnalytics trackAppOpenedWithLaunchOptions:launchOptions];
     [NTRUser registerSubclass];
     
-    [[NTRNearbyServicesManager sharedManager] start];
+    if ([PFUser currentUser]) {
+        [[NTRNearbyServicesManager sharedManager] start];
+    } else {
+        UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+        self.window.rootViewController = [storyboard instantiateViewControllerWithIdentifier:@"NTRLoginViewController"];
+    }
+    
     return YES;
 }
 							

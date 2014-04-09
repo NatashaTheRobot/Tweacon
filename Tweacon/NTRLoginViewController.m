@@ -6,22 +6,20 @@
 //  Copyright (c) 2014 NatashaTheRobot. All rights reserved.
 //
 
-#import "NTRTweaconsViewController.h"
-#import "NTRLoginView.h"
+#import "NTRLoginViewController.h"
 #import "PFTwitterUtils+NativeTwitter.h"
 #import "NTRTwitterClient.h"
 #import "FHSTwitterEngine.h"
 #import "NTRUser.h"
+#import "NTRNearbyServicesManager.h"
 
-@interface NTRTweaconsViewController () <NTRLoginViewDelegate, UIActionSheetDelegate>
+@interface NTRLoginViewController () <UIActionSheetDelegate>
 
 @property (strong, nonatomic) NSArray *twitterAccounts;
 
-@property (weak, nonatomic) NTRLoginView *loginView;
-
 @end
 
-@implementation NTRTweaconsViewController
+@implementation NTRLoginViewController
 
 - (id)initWithCoder:(NSCoder *)aDecoder
 {
@@ -35,10 +33,6 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
-    if (![PFUser currentUser]) {
-        [self addLoginView];
-    }
 }
 
 - (void)dealloc
@@ -46,11 +40,11 @@
     [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
 
-#pragma mark - LoginViewDelegate
+#pragma mark - Actions
 
-- (void)onTwitterLoginAction
+- (IBAction)onTwitterLoginButtonTap:(id)sender
 {
-    __weak NTRTweaconsViewController *weakSelf = self;
+    __weak NTRLoginViewController *weakSelf = self;
     [PFTwitterUtils getTwitterAccounts:^(BOOL accountsWereFound, NSArray *twitterAccounts) {
         [weakSelf handleTwitterAccounts:twitterAccounts];
     }];
@@ -60,9 +54,8 @@
 
 - (void)onTwitterLoginSuccess:(id)notification
 {
-    [self.loginView removeFromSuperview];
-    //    [[NSUserDefaults standardUserDefaults] setObject:[twitterAccount username] forKey:@"username"];
-    // start beaconing
+    [[NTRNearbyServicesManager sharedManager] start];
+    [self performSegueWithIdentifier:@"loginToTweaconsSegue" sender:self];
 }
 
 - (void)onTwitterLoginFailure:(id)notification
@@ -76,14 +69,6 @@
 {
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(onTwitterLoginSuccess:) name:NTRNotificationTwitterLoginSuccess object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(onTwitterLoginFailure:) name:NTRNotificationTwitterLoginFailure object:nil];
-}
-
-- (void)addLoginView
-{
-    self.loginView = [[NSBundle mainBundle] loadNibNamed:@"NTRLoginView" owner:self options:nil][0];
-    self.loginView.delegate = self;
-    self.loginView.frame = CGRectMake(0, 300, self.loginView.frame.size.width, self.loginView.frame.size.height);
-    [self.view addSubview:self.loginView];
 }
 
 #pragma mark - Twitter Login Methods

@@ -6,6 +6,6 @@
 //  Copyright (c) 2014 NatashaTheRobot. All rights reserved.
 //
 
-@interface NTRTweaconsViewController : UIViewController
+@interface NTRLoginViewController : UIViewController
 
 @end
