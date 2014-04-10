@@ -18,6 +18,7 @@
 @dynamic name;
 @dynamic imageURL;
 @dynamic profileDescription;
+@dynamic location;
 
 - (void)configureWithData:(NSDictionary *)data
 {
@@ -25,6 +26,7 @@
     self.name= data[@"name"];
     self.profileDescription = data[@"description"];
     self.imageURL = [data[@"profile_image_url_https"] stringByReplacingOccurrencesOfString:@"_normal" withString:@"_bigger"];
+    self.location = data[@"location"];
 }
 
 @end
