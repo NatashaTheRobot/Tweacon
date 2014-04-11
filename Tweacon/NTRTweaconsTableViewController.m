@@ -10,6 +10,7 @@
 #import "NTRNearbyServicesManager.h"
 #import "NTRUser.h"
 #import "NTRTwitterWebViewController.h"
+#import <SDWebImage/UIImageView+WebCache.h>
 
 @interface NTRTweaconsTableViewController ()
 
@@ -69,6 +70,11 @@
     NTRUser *user = self.nearbyUsers[indexPath.row];
     cell.textLabel.text = [NSString stringWithFormat:@"@%@", user.screenName];
     cell.detailTextLabel.text = user.profileDescription;
+    [cell.imageView setImageWithURL:[NSURL URLWithString:user.imageURL]
+                   placeholderImage:[UIImage imageNamed:@"placeholder"]
+                          completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType) {
+        
+    }];
     
     return cell;
 }

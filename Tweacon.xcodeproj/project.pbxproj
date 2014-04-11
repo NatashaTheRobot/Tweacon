@@ -1,748 +1,2176 @@
-// !$*UTF8*$!
-{
-	archiveVersion = 1;
-	classes = {
-	};
-	objectVersion = 46;
-	objects = {
-
-/* Begin PBXBuildFile section */
-		9C51998C18F04CCF00CD1015 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C51998B18F04CCF00CD1015 /* Foundation.framework */; };
-		9C51998E18F04CCF00CD1015 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C51998D18F04CCF00CD1015 /* CoreGraphics.framework */; };
-		9C51999018F04CCF00CD1015 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C51998F18F04CCF00CD1015 /* UIKit.framework */; };
-		9C51999618F04CD000CD1015 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9C51999418F04CD000CD1015 /* InfoPlist.strings */; };
-		9C51999818F04CD000CD1015 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C51999718F04CD000CD1015 /* main.m */; };
-		9C51999C18F04CD000CD1015 /* NTRAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C51999B18F04CD000CD1015 /* NTRAppDelegate.m */; };
-		9C51999F18F04CD000CD1015 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9C51999D18F04CD000CD1015 /* Main.storyboard */; };
-		9C5199A218F04CD000CD1015 /* NTRLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C5199A118F04CD000CD1015 /* NTRLoginViewController.m */; };
-		9C5199A418F04CD000CD1015 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9C5199A318F04CD000CD1015 /* Images.xcassets */; };
-		9C5199AB18F04CD100CD1015 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C5199AA18F04CD100CD1015 /* XCTest.framework */; };
-		9C5199AC18F04CD100CD1015 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C51998B18F04CCF00CD1015 /* Foundation.framework */; };
-		9C5199AD18F04CD100CD1015 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C51998F18F04CCF00CD1015 /* UIKit.framework */; };
-		9C5199B518F04CD100CD1015 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9C5199B318F04CD100CD1015 /* InfoPlist.strings */; };
-		9C5199B718F04CD100CD1015 /* TweaconTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C5199B618F04CD100CD1015 /* TweaconTests.m */; };
-		9C5199C818F05C5000CD1015 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C5199C718F05C5000CD1015 /* Parse.framework */; };
-		9C5199CA18F05C6E00CD1015 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C5199C918F05C6E00CD1015 /* AudioToolbox.framework */; };
-		9C5199CC18F05C7900CD1015 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C5199CB18F05C7900CD1015 /* CFNetwork.framework */; };
-		9C5199CE18F05C8500CD1015 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C5199CD18F05C8500CD1015 /* CoreLocation.framework */; };
-		9C5199D018F05C9300CD1015 /* libz.1.1.3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C5199CF18F05C9300CD1015 /* libz.1.1.3.dylib */; };
-		9C5199D218F05C9D00CD1015 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C5199D118F05C9D00CD1015 /* MobileCoreServices.framework */; };
-		9C5199D418F05CA700CD1015 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C5199D318F05CA700CD1015 /* QuartzCore.framework */; };
-		9C5199D618F05CB100CD1015 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C5199D518F05CB100CD1015 /* Security.framework */; };
-		9C5199D818F05CBA00CD1015 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C5199D718F05CBA00CD1015 /* StoreKit.framework */; };
-		9C5199DA18F05CC500CD1015 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C5199D918F05CC500CD1015 /* SystemConfiguration.framework */; };
-		9C5199E318F07F8500CD1015 /* NTRUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C5199E218F07F8500CD1015 /* NTRUser.m */; };
-		9C5199F118F09B9F00CD1015 /* NTRTwitterClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C5199F018F09B9F00CD1015 /* NTRTwitterClient.m */; };
-		9C5199F418F0A20D00CD1015 /* NTRConstants+TwitterClientExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C5199F318F0A20D00CD1015 /* NTRConstants+TwitterClientExtensions.m */; };
-		9C5199F718F0A70300CD1015 /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C5199F618F0A70300CD1015 /* Accounts.framework */; };
-		9C5199F918F0A70E00CD1015 /* Twitter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C5199F818F0A70E00CD1015 /* Twitter.framework */; };
-		9C5199FB18F0A71800CD1015 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C5199FA18F0A71800CD1015 /* Social.framework */; };
-		9C519A1618F0B1B100CD1015 /* FBMissingSymbols.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C519A1518F0B1B100CD1015 /* FBMissingSymbols.m */; };
-		9C519A5518F0BD1C00CD1015 /* TWAPIManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C519A5218F0BD1C00CD1015 /* TWAPIManager.m */; };
-		9C519A5618F0BD1C00CD1015 /* TWSignedRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C519A5418F0BD1C00CD1015 /* TWSignedRequest.m */; };
-		9C519A5918F0BD2700CD1015 /* PFTwitterUtils+NativeTwitter.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C519A5818F0BD2700CD1015 /* PFTwitterUtils+NativeTwitter.m */; };
-		9C519A6218F0BDD200CD1015 /* NSData+Base64.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C519A5D18F0BDD200CD1015 /* NSData+Base64.m */; };
-		9C519A6318F0BDD200CD1015 /* OAuth+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C519A5F18F0BDD200CD1015 /* OAuth+Additions.m */; };
-		9C519A6418F0BDD200CD1015 /* OAuthCore.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C519A6118F0BDD200CD1015 /* OAuthCore.m */; };
-		9C519A6618F0CDA400CD1015 /* NTRConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C519A6518F0CDA400CD1015 /* NTRConstants.m */; };
-		9C519A6B18F0CE8300CD1015 /* FHSTwitterEngine.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C519A6A18F0CE8300CD1015 /* FHSTwitterEngine.m */; };
-		9C519A6E18F0CF2100CD1015 /* FHSStream.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C519A6D18F0CF2100CD1015 /* FHSStream.m */; };
-		9C519AF718F58D0F00CD1015 /* NTRNearbyServicesManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C519AF618F58D0F00CD1015 /* NTRNearbyServicesManager.m */; };
-		9C519AFA18F58D3900CD1015 /* MultipeerConnectivity.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C519AF918F58D3900CD1015 /* MultipeerConnectivity.framework */; };
-		9C519AFD18F5989200CD1015 /* NTRConstants+MultipeerExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C519AFC18F5989200CD1015 /* NTRConstants+MultipeerExtensions.m */; };
-		9C7C8B2C18F6DC7200E88754 /* NTRTweaconsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C7C8B2B18F6DC7200E88754 /* NTRTweaconsTableViewController.m */; };
-		9C7C8B2F18F6E1D600E88754 /* NTRTwitterWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C7C8B2E18F6E1D600E88754 /* NTRTwitterWebViewController.m */; };
-/* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		9C5199AE18F04CD100CD1015 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 9C51998018F04CCF00CD1015 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 9C51998718F04CCF00CD1015;
-			remoteInfo = Tweacon;
-		};
-/* End PBXContainerItemProxy section */
-
-/* Begin PBXFileReference section */
-		9C51998818F04CCF00CD1015 /* Tweacon.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tweacon.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		9C51998B18F04CCF00CD1015 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
-		9C51998D18F04CCF00CD1015 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		9C51998F18F04CCF00CD1015 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
-		9C51999318F04CD000CD1015 /* Tweacon-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Tweacon-Info.plist"; sourceTree = "<group>"; };
-		9C51999518F04CD000CD1015 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		9C51999718F04CD000CD1015 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		9C51999918F04CD000CD1015 /* Tweacon-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Tweacon-Prefix.pch"; sourceTree = "<group>"; };
-		9C51999A18F04CD000CD1015 /* NTRAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NTRAppDelegate.h; sourceTree = "<group>"; };
-		9C51999B18F04CD000CD1015 /* NTRAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NTRAppDelegate.m; sourceTree = "<group>"; };
-		9C51999E18F04CD000CD1015 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		9C5199A018F04CD000CD1015 /* NTRLoginViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NTRLoginViewController.h; sourceTree = "<group>"; };
-		9C5199A118F04CD000CD1015 /* NTRLoginViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NTRLoginViewController.m; sourceTree = "<group>"; };
-		9C5199A318F04CD000CD1015 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		9C5199A918F04CD100CD1015 /* TweaconTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TweaconTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		9C5199AA18F04CD100CD1015 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
-		9C5199B218F04CD100CD1015 /* TweaconTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "TweaconTests-Info.plist"; sourceTree = "<group>"; };
-		9C5199B418F04CD100CD1015 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		9C5199B618F04CD100CD1015 /* TweaconTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TweaconTests.m; sourceTree = "<group>"; };
-		9C5199C718F05C5000CD1015 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
-		9C5199C918F05C6E00CD1015 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
-		9C5199CB18F05C7900CD1015 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
-		9C5199CD18F05C8500CD1015 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
-		9C5199CF18F05C9300CD1015 /* libz.1.1.3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.1.1.3.dylib; path = usr/lib/libz.1.1.3.dylib; sourceTree = SDKROOT; };
-		9C5199D118F05C9D00CD1015 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
-		9C5199D318F05CA700CD1015 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
-		9C5199D518F05CB100CD1015 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
-		9C5199D718F05CBA00CD1015 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
-		9C5199D918F05CC500CD1015 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
-		9C5199DC18F05D1900CD1015 /* NTRConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NTRConstants.h; sourceTree = "<group>"; };
-		9C5199E118F07F8500CD1015 /* NTRUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NTRUser.h; sourceTree = "<group>"; };
-		9C5199E218F07F8500CD1015 /* NTRUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NTRUser.m; sourceTree = "<group>"; };
-		9C5199EF18F09B9F00CD1015 /* NTRTwitterClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NTRTwitterClient.h; sourceTree = "<group>"; };
-		9C5199F018F09B9F00CD1015 /* NTRTwitterClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NTRTwitterClient.m; sourceTree = "<group>"; };
-		9C5199F218F0A20D00CD1015 /* NTRConstants+TwitterClientExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NTRConstants+TwitterClientExtensions.h"; sourceTree = "<group>"; };
-		9C5199F318F0A20D00CD1015 /* NTRConstants+TwitterClientExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NTRConstants+TwitterClientExtensions.m"; sourceTree = "<group>"; };
-		9C5199F618F0A70300CD1015 /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
-		9C5199F818F0A70E00CD1015 /* Twitter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Twitter.framework; path = System/Library/Frameworks/Twitter.framework; sourceTree = SDKROOT; };
-		9C5199FA18F0A71800CD1015 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
-		9C519A1518F0B1B100CD1015 /* FBMissingSymbols.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FBMissingSymbols.m; sourceTree = "<group>"; };
-		9C519A5118F0BD1C00CD1015 /* TWAPIManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TWAPIManager.h; sourceTree = "<group>"; };
-		9C519A5218F0BD1C00CD1015 /* TWAPIManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TWAPIManager.m; sourceTree = "<group>"; };
-		9C519A5318F0BD1C00CD1015 /* TWSignedRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TWSignedRequest.h; sourceTree = "<group>"; };
-		9C519A5418F0BD1C00CD1015 /* TWSignedRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TWSignedRequest.m; sourceTree = "<group>"; };
-		9C519A5718F0BD2700CD1015 /* PFTwitterUtils+NativeTwitter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "PFTwitterUtils+NativeTwitter.h"; sourceTree = "<group>"; };
-		9C519A5818F0BD2700CD1015 /* PFTwitterUtils+NativeTwitter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "PFTwitterUtils+NativeTwitter.m"; sourceTree = "<group>"; };
-		9C519A5C18F0BDD200CD1015 /* NSData+Base64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+Base64.h"; sourceTree = "<group>"; };
-		9C519A5D18F0BDD200CD1015 /* NSData+Base64.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+Base64.m"; sourceTree = "<group>"; };
-		9C519A5E18F0BDD200CD1015 /* OAuth+Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "OAuth+Additions.h"; sourceTree = "<group>"; };
-		9C519A5F18F0BDD200CD1015 /* OAuth+Additions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "OAuth+Additions.m"; sourceTree = "<group>"; };
-		9C519A6018F0BDD200CD1015 /* OAuthCore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OAuthCore.h; sourceTree = "<group>"; };
-		9C519A6118F0BDD200CD1015 /* OAuthCore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OAuthCore.m; sourceTree = "<group>"; };
-		9C519A6518F0CDA400CD1015 /* NTRConstants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NTRConstants.m; sourceTree = "<group>"; };
-		9C519A6918F0CE8300CD1015 /* FHSTwitterEngine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FHSTwitterEngine.h; sourceTree = "<group>"; };
-		9C519A6A18F0CE8300CD1015 /* FHSTwitterEngine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FHSTwitterEngine.m; sourceTree = "<group>"; };
-		9C519A6C18F0CF2100CD1015 /* FHSStream.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FHSStream.h; sourceTree = "<group>"; };
-		9C519A6D18F0CF2100CD1015 /* FHSStream.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FHSStream.m; sourceTree = "<group>"; };
-		9C519AF518F58D0F00CD1015 /* NTRNearbyServicesManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NTRNearbyServicesManager.h; sourceTree = "<group>"; };
-		9C519AF618F58D0F00CD1015 /* NTRNearbyServicesManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NTRNearbyServicesManager.m; sourceTree = "<group>"; };
-		9C519AF918F58D3900CD1015 /* MultipeerConnectivity.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MultipeerConnectivity.framework; path = System/Library/Frameworks/MultipeerConnectivity.framework; sourceTree = SDKROOT; };
-		9C519AFB18F5989200CD1015 /* NTRConstants+MultipeerExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NTRConstants+MultipeerExtensions.h"; sourceTree = "<group>"; };
-		9C519AFC18F5989200CD1015 /* NTRConstants+MultipeerExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NTRConstants+MultipeerExtensions.m"; sourceTree = "<group>"; };
-		9C7C8B2A18F6DC7200E88754 /* NTRTweaconsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NTRTweaconsTableViewController.h; sourceTree = "<group>"; };
-		9C7C8B2B18F6DC7200E88754 /* NTRTweaconsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NTRTweaconsTableViewController.m; sourceTree = "<group>"; };
-		9C7C8B2D18F6E1D600E88754 /* NTRTwitterWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NTRTwitterWebViewController.h; sourceTree = "<group>"; };
-		9C7C8B2E18F6E1D600E88754 /* NTRTwitterWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NTRTwitterWebViewController.m; sourceTree = "<group>"; };
-/* End PBXFileReference section */
-
-/* Begin PBXFrameworksBuildPhase section */
-		9C51998518F04CCF00CD1015 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				9C519AFA18F58D3900CD1015 /* MultipeerConnectivity.framework in Frameworks */,
-				9C5199FB18F0A71800CD1015 /* Social.framework in Frameworks */,
-				9C5199F918F0A70E00CD1015 /* Twitter.framework in Frameworks */,
-				9C5199F718F0A70300CD1015 /* Accounts.framework in Frameworks */,
-				9C5199DA18F05CC500CD1015 /* SystemConfiguration.framework in Frameworks */,
-				9C5199D818F05CBA00CD1015 /* StoreKit.framework in Frameworks */,
-				9C5199D618F05CB100CD1015 /* Security.framework in Frameworks */,
-				9C5199D418F05CA700CD1015 /* QuartzCore.framework in Frameworks */,
-				9C5199D218F05C9D00CD1015 /* MobileCoreServices.framework in Frameworks */,
-				9C5199D018F05C9300CD1015 /* libz.1.1.3.dylib in Frameworks */,
-				9C5199CE18F05C8500CD1015 /* CoreLocation.framework in Frameworks */,
-				9C5199CC18F05C7900CD1015 /* CFNetwork.framework in Frameworks */,
-				9C5199CA18F05C6E00CD1015 /* AudioToolbox.framework in Frameworks */,
-				9C51998E18F04CCF00CD1015 /* CoreGraphics.framework in Frameworks */,
-				9C51999018F04CCF00CD1015 /* UIKit.framework in Frameworks */,
-				9C5199C818F05C5000CD1015 /* Parse.framework in Frameworks */,
-				9C51998C18F04CCF00CD1015 /* Foundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		9C5199A618F04CD100CD1015 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				9C5199AB18F04CD100CD1015 /* XCTest.framework in Frameworks */,
-				9C5199AD18F04CD100CD1015 /* UIKit.framework in Frameworks */,
-				9C5199AC18F04CD100CD1015 /* Foundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXFrameworksBuildPhase section */
-
-/* Begin PBXGroup section */
-		9C51997F18F04CCF00CD1015 = {
-			isa = PBXGroup;
-			children = (
-				9C51999118F04CCF00CD1015 /* Tweacon */,
-				9C5199B018F04CD100CD1015 /* TweaconTests */,
-				9C51998A18F04CCF00CD1015 /* Frameworks */,
-				9C51998918F04CCF00CD1015 /* Products */,
-			);
-			sourceTree = "<group>";
-		};
-		9C51998918F04CCF00CD1015 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				9C51998818F04CCF00CD1015 /* Tweacon.app */,
-				9C5199A918F04CD100CD1015 /* TweaconTests.xctest */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		9C51998A18F04CCF00CD1015 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				9C519AF918F58D3900CD1015 /* MultipeerConnectivity.framework */,
-				9C5199FA18F0A71800CD1015 /* Social.framework */,
-				9C5199F818F0A70E00CD1015 /* Twitter.framework */,
-				9C5199F618F0A70300CD1015 /* Accounts.framework */,
-				9C5199D918F05CC500CD1015 /* SystemConfiguration.framework */,
-				9C5199D718F05CBA00CD1015 /* StoreKit.framework */,
-				9C5199D518F05CB100CD1015 /* Security.framework */,
-				9C5199D318F05CA700CD1015 /* QuartzCore.framework */,
-				9C5199D118F05C9D00CD1015 /* MobileCoreServices.framework */,
-				9C5199CF18F05C9300CD1015 /* libz.1.1.3.dylib */,
-				9C5199CD18F05C8500CD1015 /* CoreLocation.framework */,
-				9C5199CB18F05C7900CD1015 /* CFNetwork.framework */,
-				9C5199C918F05C6E00CD1015 /* AudioToolbox.framework */,
-				9C5199C718F05C5000CD1015 /* Parse.framework */,
-				9C51998B18F04CCF00CD1015 /* Foundation.framework */,
-				9C51998D18F04CCF00CD1015 /* CoreGraphics.framework */,
-				9C51998F18F04CCF00CD1015 /* UIKit.framework */,
-				9C5199AA18F04CD100CD1015 /* XCTest.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		9C51999118F04CCF00CD1015 /* Tweacon */ = {
-			isa = PBXGroup;
-			children = (
-				9C51999A18F04CD000CD1015 /* NTRAppDelegate.h */,
-				9C51999B18F04CD000CD1015 /* NTRAppDelegate.m */,
-				9C5199DC18F05D1900CD1015 /* NTRConstants.h */,
-				9C519A6518F0CDA400CD1015 /* NTRConstants.m */,
-				9C5199DB18F05CE000CD1015 /* ViewControllers */,
-				9C5199DF18F0792900CD1015 /* Views */,
-				9C5199E018F07B6A00CD1015 /* Models */,
-				9C5199EE18F09B3F00CD1015 /* Networking */,
-				9C519AF818F58D1600CD1015 /* Helpers */,
-				9C5199A318F04CD000CD1015 /* Images.xcassets */,
-				9C5199EB18F0972100CD1015 /* Vendors */,
-				9C51999218F04CD000CD1015 /* Supporting Files */,
-			);
-			path = Tweacon;
-			sourceTree = "<group>";
-		};
-		9C51999218F04CD000CD1015 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				9C51999318F04CD000CD1015 /* Tweacon-Info.plist */,
-				9C51999418F04CD000CD1015 /* InfoPlist.strings */,
-				9C51999718F04CD000CD1015 /* main.m */,
-				9C51999918F04CD000CD1015 /* Tweacon-Prefix.pch */,
-				9C519A1518F0B1B100CD1015 /* FBMissingSymbols.m */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		9C5199B018F04CD100CD1015 /* TweaconTests */ = {
-			isa = PBXGroup;
-			children = (
-				9C5199B618F04CD100CD1015 /* TweaconTests.m */,
-				9C5199B118F04CD100CD1015 /* Supporting Files */,
-			);
-			path = TweaconTests;
-			sourceTree = "<group>";
-		};
-		9C5199B118F04CD100CD1015 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				9C5199B218F04CD100CD1015 /* TweaconTests-Info.plist */,
-				9C5199B318F04CD100CD1015 /* InfoPlist.strings */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		9C5199DB18F05CE000CD1015 /* ViewControllers */ = {
-			isa = PBXGroup;
-			children = (
-				9C5199A018F04CD000CD1015 /* NTRLoginViewController.h */,
-				9C5199A118F04CD000CD1015 /* NTRLoginViewController.m */,
-				9C7C8B2A18F6DC7200E88754 /* NTRTweaconsTableViewController.h */,
-				9C7C8B2B18F6DC7200E88754 /* NTRTweaconsTableViewController.m */,
-				9C7C8B2D18F6E1D600E88754 /* NTRTwitterWebViewController.h */,
-				9C7C8B2E18F6E1D600E88754 /* NTRTwitterWebViewController.m */,
-			);
-			name = ViewControllers;
-			sourceTree = "<group>";
-		};
-		9C5199DF18F0792900CD1015 /* Views */ = {
-			isa = PBXGroup;
-			children = (
-				9C5199E718F095F800CD1015 /* storyboards */,
-			);
-			name = Views;
-			sourceTree = "<group>";
-		};
-		9C5199E018F07B6A00CD1015 /* Models */ = {
-			isa = PBXGroup;
-			children = (
-				9C5199E118F07F8500CD1015 /* NTRUser.h */,
-				9C5199E218F07F8500CD1015 /* NTRUser.m */,
-			);
-			name = Models;
-			sourceTree = "<group>";
-		};
-		9C5199E718F095F800CD1015 /* storyboards */ = {
-			isa = PBXGroup;
-			children = (
-				9C51999D18F04CD000CD1015 /* Main.storyboard */,
-			);
-			name = storyboards;
-			sourceTree = "<group>";
-		};
-		9C5199EB18F0972100CD1015 /* Vendors */ = {
-			isa = PBXGroup;
-			children = (
-				9C519A6818F0CE6A00CD1015 /* FHSTwitterEngine */,
-				9C519A6718F0CE5800CD1015 /* PFTwitterUtils+NativeTwitter */,
-			);
-			name = Vendors;
-			sourceTree = "<group>";
-		};
-		9C5199EE18F09B3F00CD1015 /* Networking */ = {
-			isa = PBXGroup;
-			children = (
-				9C5199EF18F09B9F00CD1015 /* NTRTwitterClient.h */,
-				9C5199F018F09B9F00CD1015 /* NTRTwitterClient.m */,
-				9C5199F518F0A23000CD1015 /* Helpers */,
-			);
-			name = Networking;
-			sourceTree = "<group>";
-		};
-		9C5199F518F0A23000CD1015 /* Helpers */ = {
-			isa = PBXGroup;
-			children = (
-				9C5199F218F0A20D00CD1015 /* NTRConstants+TwitterClientExtensions.h */,
-				9C5199F318F0A20D00CD1015 /* NTRConstants+TwitterClientExtensions.m */,
-			);
-			name = Helpers;
-			sourceTree = "<group>";
-		};
-		9C519A5018F0BD1C00CD1015 /* TwitterReverseAuth */ = {
-			isa = PBXGroup;
-			children = (
-				9C519A5118F0BD1C00CD1015 /* TWAPIManager.h */,
-				9C519A5218F0BD1C00CD1015 /* TWAPIManager.m */,
-				9C519A5318F0BD1C00CD1015 /* TWSignedRequest.h */,
-				9C519A5418F0BD1C00CD1015 /* TWSignedRequest.m */,
-			);
-			path = TwitterReverseAuth;
-			sourceTree = "<group>";
-		};
-		9C519A5B18F0BDD200CD1015 /* ABOAuthCore */ = {
-			isa = PBXGroup;
-			children = (
-				9C519A5C18F0BDD200CD1015 /* NSData+Base64.h */,
-				9C519A5D18F0BDD200CD1015 /* NSData+Base64.m */,
-				9C519A5E18F0BDD200CD1015 /* OAuth+Additions.h */,
-				9C519A5F18F0BDD200CD1015 /* OAuth+Additions.m */,
-				9C519A6018F0BDD200CD1015 /* OAuthCore.h */,
-				9C519A6118F0BDD200CD1015 /* OAuthCore.m */,
-			);
-			path = ABOAuthCore;
-			sourceTree = "<group>";
-		};
-		9C519A6718F0CE5800CD1015 /* PFTwitterUtils+NativeTwitter */ = {
-			isa = PBXGroup;
-			children = (
-				9C519A5718F0BD2700CD1015 /* PFTwitterUtils+NativeTwitter.h */,
-				9C519A5818F0BD2700CD1015 /* PFTwitterUtils+NativeTwitter.m */,
-				9C519A5B18F0BDD200CD1015 /* ABOAuthCore */,
-				9C519A5018F0BD1C00CD1015 /* TwitterReverseAuth */,
-			);
-			name = "PFTwitterUtils+NativeTwitter";
-			sourceTree = "<group>";
-		};
-		9C519A6818F0CE6A00CD1015 /* FHSTwitterEngine */ = {
-			isa = PBXGroup;
-			children = (
-				9C519A6918F0CE8300CD1015 /* FHSTwitterEngine.h */,
-				9C519A6A18F0CE8300CD1015 /* FHSTwitterEngine.m */,
-				9C519A6C18F0CF2100CD1015 /* FHSStream.h */,
-				9C519A6D18F0CF2100CD1015 /* FHSStream.m */,
-			);
-			name = FHSTwitterEngine;
-			sourceTree = "<group>";
-		};
-		9C519AF818F58D1600CD1015 /* Helpers */ = {
-			isa = PBXGroup;
-			children = (
-				9C519AFE18F598C100CD1015 /* Multipeer Connectivity */,
-			);
-			name = Helpers;
-			sourceTree = "<group>";
-		};
-		9C519AFE18F598C100CD1015 /* Multipeer Connectivity */ = {
-			isa = PBXGroup;
-			children = (
-				9C519AF518F58D0F00CD1015 /* NTRNearbyServicesManager.h */,
-				9C519AF618F58D0F00CD1015 /* NTRNearbyServicesManager.m */,
-				9C519AFB18F5989200CD1015 /* NTRConstants+MultipeerExtensions.h */,
-				9C519AFC18F5989200CD1015 /* NTRConstants+MultipeerExtensions.m */,
-			);
-			name = "Multipeer Connectivity";
-			sourceTree = "<group>";
-		};
-/* End PBXGroup section */
-
-/* Begin PBXNativeTarget section */
-		9C51998718F04CCF00CD1015 /* Tweacon */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 9C5199BA18F04CD100CD1015 /* Build configuration list for PBXNativeTarget "Tweacon" */;
-			buildPhases = (
-				9C51998418F04CCF00CD1015 /* Sources */,
-				9C51998518F04CCF00CD1015 /* Frameworks */,
-				9C51998618F04CCF00CD1015 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = Tweacon;
-			productName = Tweacon;
-			productReference = 9C51998818F04CCF00CD1015 /* Tweacon.app */;
-			productType = "com.apple.product-type.application";
-		};
-		9C5199A818F04CD100CD1015 /* TweaconTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 9C5199BD18F04CD100CD1015 /* Build configuration list for PBXNativeTarget "TweaconTests" */;
-			buildPhases = (
-				9C5199A518F04CD100CD1015 /* Sources */,
-				9C5199A618F04CD100CD1015 /* Frameworks */,
-				9C5199A718F04CD100CD1015 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				9C5199AF18F04CD100CD1015 /* PBXTargetDependency */,
-			);
-			name = TweaconTests;
-			productName = TweaconTests;
-			productReference = 9C5199A918F04CD100CD1015 /* TweaconTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
-/* End PBXNativeTarget section */
-
-/* Begin PBXProject section */
-		9C51998018F04CCF00CD1015 /* Project object */ = {
-			isa = PBXProject;
-			attributes = {
-				CLASSPREFIX = NTR;
-				LastUpgradeCheck = 0510;
-				ORGANIZATIONNAME = NatashaTheRobot;
-				TargetAttributes = {
-					9C5199A818F04CD100CD1015 = {
-						TestTargetID = 9C51998718F04CCF00CD1015;
-					};
-				};
-			};
-			buildConfigurationList = 9C51998318F04CCF00CD1015 /* Build configuration list for PBXProject "Tweacon" */;
-			compatibilityVersion = "Xcode 3.2";
-			developmentRegion = English;
-			hasScannedForEncodings = 0;
-			knownRegions = (
-				en,
-				Base,
-			);
-			mainGroup = 9C51997F18F04CCF00CD1015;
-			productRefGroup = 9C51998918F04CCF00CD1015 /* Products */;
-			projectDirPath = "";
-			projectRoot = "";
-			targets = (
-				9C51998718F04CCF00CD1015 /* Tweacon */,
-				9C5199A818F04CD100CD1015 /* TweaconTests */,
-			);
-		};
-/* End PBXProject section */
-
-/* Begin PBXResourcesBuildPhase section */
-		9C51998618F04CCF00CD1015 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				9C5199A418F04CD000CD1015 /* Images.xcassets in Resources */,
-				9C51999618F04CD000CD1015 /* InfoPlist.strings in Resources */,
-				9C51999F18F04CD000CD1015 /* Main.storyboard in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		9C5199A718F04CD100CD1015 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				9C5199B518F04CD100CD1015 /* InfoPlist.strings in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXResourcesBuildPhase section */
-
-/* Begin PBXSourcesBuildPhase section */
-		9C51998418F04CCF00CD1015 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				9C51999818F04CD000CD1015 /* main.m in Sources */,
-				9C5199E318F07F8500CD1015 /* NTRUser.m in Sources */,
-				9C51999C18F04CD000CD1015 /* NTRAppDelegate.m in Sources */,
-				9C5199F118F09B9F00CD1015 /* NTRTwitterClient.m in Sources */,
-				9C519A5618F0BD1C00CD1015 /* TWSignedRequest.m in Sources */,
-				9C519A6418F0BDD200CD1015 /* OAuthCore.m in Sources */,
-				9C519A5518F0BD1C00CD1015 /* TWAPIManager.m in Sources */,
-				9C519A6B18F0CE8300CD1015 /* FHSTwitterEngine.m in Sources */,
-				9C519A6318F0BDD200CD1015 /* OAuth+Additions.m in Sources */,
-				9C519A5918F0BD2700CD1015 /* PFTwitterUtils+NativeTwitter.m in Sources */,
-				9C519AFD18F5989200CD1015 /* NTRConstants+MultipeerExtensions.m in Sources */,
-				9C519A6618F0CDA400CD1015 /* NTRConstants.m in Sources */,
-				9C519AF718F58D0F00CD1015 /* NTRNearbyServicesManager.m in Sources */,
-				9C5199A218F04CD000CD1015 /* NTRLoginViewController.m in Sources */,
-				9C519A1618F0B1B100CD1015 /* FBMissingSymbols.m in Sources */,
-				9C7C8B2C18F6DC7200E88754 /* NTRTweaconsTableViewController.m in Sources */,
-				9C7C8B2F18F6E1D600E88754 /* NTRTwitterWebViewController.m in Sources */,
-				9C519A6218F0BDD200CD1015 /* NSData+Base64.m in Sources */,
-				9C519A6E18F0CF2100CD1015 /* FHSStream.m in Sources */,
-				9C5199F418F0A20D00CD1015 /* NTRConstants+TwitterClientExtensions.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		9C5199A518F04CD100CD1015 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				9C5199B718F04CD100CD1015 /* TweaconTests.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		9C5199AF18F04CD100CD1015 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 9C51998718F04CCF00CD1015 /* Tweacon */;
-			targetProxy = 9C5199AE18F04CD100CD1015 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
-
-/* Begin PBXVariantGroup section */
-		9C51999418F04CD000CD1015 /* InfoPlist.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				9C51999518F04CD000CD1015 /* en */,
-			);
-			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-		9C51999D18F04CD000CD1015 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				9C51999E18F04CD000CD1015 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		9C5199B318F04CD100CD1015 /* InfoPlist.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				9C5199B418F04CD100CD1015 /* en */,
-			);
-			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
-
-/* Begin XCBuildConfiguration section */
-		9C5199B818F04CD100CD1015 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
-				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_MODULES = YES;
-				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_WARN_BOOL_CONVERSION = YES;
-				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
-				CLANG_WARN_EMPTY_BODY = YES;
-				CLANG_WARN_ENUM_CONVERSION = YES;
-				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				COPY_PHASE_STRIP = NO;
-				GCC_C_LANGUAGE_STANDARD = gnu99;
-				GCC_DYNAMIC_NO_PIC = NO;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
-				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
-				GCC_WARN_UNUSED_FUNCTION = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
-				ONLY_ACTIVE_ARCH = YES;
-				SDKROOT = iphoneos;
-			};
-			name = Debug;
-		};
-		9C5199B918F04CD100CD1015 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
-				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_MODULES = YES;
-				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_WARN_BOOL_CONVERSION = YES;
-				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
-				CLANG_WARN_EMPTY_BODY = YES;
-				CLANG_WARN_ENUM_CONVERSION = YES;
-				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				COPY_PHASE_STRIP = YES;
-				ENABLE_NS_ASSERTIONS = NO;
-				GCC_C_LANGUAGE_STANDARD = gnu99;
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
-				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
-				GCC_WARN_UNUSED_FUNCTION = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
-				SDKROOT = iphoneos;
-				VALIDATE_PRODUCT = YES;
-			};
-			name = Release;
-		};
-		9C5199BB18F04CD100CD1015 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)",
-				);
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Tweacon/Tweacon-Prefix.pch";
-				"HEADER_SEARCH_PATHS[arch=*]" = (
-					"$(inherited)",
-					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
-				);
-				INFOPLIST_FILE = "Tweacon/Tweacon-Info.plist";
-				"OTHER_LDFLAGS[arch=*]" = "-all_load";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				WRAPPER_EXTENSION = app;
-			};
-			name = Debug;
-		};
-		9C5199BC18F04CD100CD1015 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)",
-				);
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Tweacon/Tweacon-Prefix.pch";
-				INFOPLIST_FILE = "Tweacon/Tweacon-Info.plist";
-				"OTHER_LDFLAGS[arch=*]" = "-all_load";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				WRAPPER_EXTENSION = app;
-			};
-			name = Release;
-		};
-		9C5199BE18F04CD100CD1015 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Tweacon.app/Tweacon";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-					"$(DEVELOPER_FRAMEWORKS_DIR)",
-				);
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Tweacon/Tweacon-Prefix.pch";
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = "TweaconTests/TweaconTests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUNDLE_LOADER)";
-				WRAPPER_EXTENSION = xctest;
-			};
-			name = Debug;
-		};
-		9C5199BF18F04CD100CD1015 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Tweacon.app/Tweacon";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-					"$(DEVELOPER_FRAMEWORKS_DIR)",
-				);
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Tweacon/Tweacon-Prefix.pch";
-				INFOPLIST_FILE = "TweaconTests/TweaconTests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUNDLE_LOADER)";
-				WRAPPER_EXTENSION = xctest;
-			};
-			name = Release;
-		};
-/* End XCBuildConfiguration section */
-
-/* Begin XCConfigurationList section */
-		9C51998318F04CCF00CD1015 /* Build configuration list for PBXProject "Tweacon" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				9C5199B818F04CD100CD1015 /* Debug */,
-				9C5199B918F04CD100CD1015 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		9C5199BA18F04CD100CD1015 /* Build configuration list for PBXNativeTarget "Tweacon" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				9C5199BB18F04CD100CD1015 /* Debug */,
-				9C5199BC18F04CD100CD1015 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		9C5199BD18F04CD100CD1015 /* Build configuration list for PBXNativeTarget "TweaconTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				9C5199BE18F04CD100CD1015 /* Debug */,
-				9C5199BF18F04CD100CD1015 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-/* End XCConfigurationList section */
-	};
-	rootObject = 9C51998018F04CCF00CD1015 /* Project object */;
-}
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>archiveVersion</key>
+	<string>1</string>
+	<key>classes</key>
+	<dict/>
+	<key>objectVersion</key>
+	<string>46</string>
+	<key>objects</key>
+	<dict>
+		<key>1745133F77F9422BBFE452F6</key>
+		<dict>
+			<key>explicitFileType</key>
+			<string>archive.ar</string>
+			<key>includeInIndex</key>
+			<string>0</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>path</key>
+			<string>libPods.a</string>
+			<key>sourceTree</key>
+			<string>BUILT_PRODUCTS_DIR</string>
+		</dict>
+		<key>1F4DB4055D8D4247B53517D4</key>
+		<dict>
+			<key>fileRef</key>
+			<string>1745133F77F9422BBFE452F6</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>4D65D3A393514C45BC0B29EA</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array/>
+			<key>inputPaths</key>
+			<array/>
+			<key>isa</key>
+			<string>PBXShellScriptBuildPhase</string>
+			<key>name</key>
+			<string>Copy Pods Resources</string>
+			<key>outputPaths</key>
+			<array/>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+			<key>shellPath</key>
+			<string>/bin/sh</string>
+			<key>shellScript</key>
+			<string>"${SRCROOT}/Pods/Pods-resources.sh"
+</string>
+			<key>showEnvVarsInLog</key>
+			<string>0</string>
+		</dict>
+		<key>87CB1979083745BD8563409E</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.xcconfig</string>
+			<key>name</key>
+			<string>Pods.xcconfig</string>
+			<key>path</key>
+			<string>Pods/Pods.xcconfig</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>9C51997F18F04CCF00CD1015</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>9C51999118F04CCF00CD1015</string>
+				<string>9C5199B018F04CD100CD1015</string>
+				<string>9C51998A18F04CCF00CD1015</string>
+				<string>9C51998918F04CCF00CD1015</string>
+				<string>87CB1979083745BD8563409E</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>9C51998018F04CCF00CD1015</key>
+		<dict>
+			<key>attributes</key>
+			<dict>
+				<key>CLASSPREFIX</key>
+				<string>NTR</string>
+				<key>LastUpgradeCheck</key>
+				<string>0510</string>
+				<key>ORGANIZATIONNAME</key>
+				<string>NatashaTheRobot</string>
+				<key>TargetAttributes</key>
+				<dict>
+					<key>9C5199A818F04CD100CD1015</key>
+					<dict>
+						<key>TestTargetID</key>
+						<string>9C51998718F04CCF00CD1015</string>
+					</dict>
+				</dict>
+			</dict>
+			<key>buildConfigurationList</key>
+			<string>9C51998318F04CCF00CD1015</string>
+			<key>compatibilityVersion</key>
+			<string>Xcode 3.2</string>
+			<key>developmentRegion</key>
+			<string>English</string>
+			<key>hasScannedForEncodings</key>
+			<string>0</string>
+			<key>isa</key>
+			<string>PBXProject</string>
+			<key>knownRegions</key>
+			<array>
+				<string>en</string>
+				<string>Base</string>
+			</array>
+			<key>mainGroup</key>
+			<string>9C51997F18F04CCF00CD1015</string>
+			<key>productRefGroup</key>
+			<string>9C51998918F04CCF00CD1015</string>
+			<key>projectDirPath</key>
+			<string></string>
+			<key>projectReferences</key>
+			<array/>
+			<key>projectRoot</key>
+			<string></string>
+			<key>targets</key>
+			<array>
+				<string>9C51998718F04CCF00CD1015</string>
+				<string>9C5199A818F04CD100CD1015</string>
+			</array>
+		</dict>
+		<key>9C51998318F04CCF00CD1015</key>
+		<dict>
+			<key>buildConfigurations</key>
+			<array>
+				<string>9C5199B818F04CD100CD1015</string>
+				<string>9C5199B918F04CD100CD1015</string>
+			</array>
+			<key>defaultConfigurationIsVisible</key>
+			<string>0</string>
+			<key>defaultConfigurationName</key>
+			<string>Release</string>
+			<key>isa</key>
+			<string>XCConfigurationList</string>
+		</dict>
+		<key>9C51998418F04CCF00CD1015</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>9C51999818F04CD000CD1015</string>
+				<string>9C5199E318F07F8500CD1015</string>
+				<string>9C51999C18F04CD000CD1015</string>
+				<string>9C5199F118F09B9F00CD1015</string>
+				<string>9C519A5618F0BD1C00CD1015</string>
+				<string>9C519A6418F0BDD200CD1015</string>
+				<string>9C519A5518F0BD1C00CD1015</string>
+				<string>9C519A6B18F0CE8300CD1015</string>
+				<string>9C519A6318F0BDD200CD1015</string>
+				<string>9C519A5918F0BD2700CD1015</string>
+				<string>9C519AFD18F5989200CD1015</string>
+				<string>9C519A6618F0CDA400CD1015</string>
+				<string>9C519AF718F58D0F00CD1015</string>
+				<string>9C5199A218F04CD000CD1015</string>
+				<string>9C519A1618F0B1B100CD1015</string>
+				<string>9C7C8B2C18F6DC7200E88754</string>
+				<string>9C7C8B2F18F6E1D600E88754</string>
+				<string>9C519A6218F0BDD200CD1015</string>
+				<string>9C519A6E18F0CF2100CD1015</string>
+				<string>9C5199F418F0A20D00CD1015</string>
+			</array>
+			<key>isa</key>
+			<string>PBXSourcesBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>9C51998518F04CCF00CD1015</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>9C519AFA18F58D3900CD1015</string>
+				<string>9C5199FB18F0A71800CD1015</string>
+				<string>9C5199F918F0A70E00CD1015</string>
+				<string>9C5199F718F0A70300CD1015</string>
+				<string>9C5199DA18F05CC500CD1015</string>
+				<string>9C5199D818F05CBA00CD1015</string>
+				<string>9C5199D618F05CB100CD1015</string>
+				<string>9C5199D418F05CA700CD1015</string>
+				<string>9C5199D218F05C9D00CD1015</string>
+				<string>9C5199D018F05C9300CD1015</string>
+				<string>9C5199CE18F05C8500CD1015</string>
+				<string>9C5199CC18F05C7900CD1015</string>
+				<string>9C5199CA18F05C6E00CD1015</string>
+				<string>9C51998E18F04CCF00CD1015</string>
+				<string>9C51999018F04CCF00CD1015</string>
+				<string>9C5199C818F05C5000CD1015</string>
+				<string>9C51998C18F04CCF00CD1015</string>
+				<string>1F4DB4055D8D4247B53517D4</string>
+			</array>
+			<key>isa</key>
+			<string>PBXFrameworksBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>9C51998618F04CCF00CD1015</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>9C5199A418F04CD000CD1015</string>
+				<string>9C51999618F04CD000CD1015</string>
+				<string>9C51999F18F04CD000CD1015</string>
+			</array>
+			<key>isa</key>
+			<string>PBXResourcesBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>9C51998718F04CCF00CD1015</key>
+		<dict>
+			<key>buildConfigurationList</key>
+			<string>9C5199BA18F04CD100CD1015</string>
+			<key>buildPhases</key>
+			<array>
+				<string>F8CED9A1CD64481F99B31DEC</string>
+				<string>9C51998418F04CCF00CD1015</string>
+				<string>9C51998518F04CCF00CD1015</string>
+				<string>9C51998618F04CCF00CD1015</string>
+				<string>4D65D3A393514C45BC0B29EA</string>
+			</array>
+			<key>buildRules</key>
+			<array/>
+			<key>dependencies</key>
+			<array/>
+			<key>isa</key>
+			<string>PBXNativeTarget</string>
+			<key>name</key>
+			<string>Tweacon</string>
+			<key>productName</key>
+			<string>Tweacon</string>
+			<key>productReference</key>
+			<string>9C51998818F04CCF00CD1015</string>
+			<key>productType</key>
+			<string>com.apple.product-type.application</string>
+		</dict>
+		<key>9C51998818F04CCF00CD1015</key>
+		<dict>
+			<key>explicitFileType</key>
+			<string>wrapper.application</string>
+			<key>includeInIndex</key>
+			<string>0</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>path</key>
+			<string>Tweacon.app</string>
+			<key>sourceTree</key>
+			<string>BUILT_PRODUCTS_DIR</string>
+		</dict>
+		<key>9C51998918F04CCF00CD1015</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>9C51998818F04CCF00CD1015</string>
+				<string>9C5199A918F04CD100CD1015</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Products</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>9C51998A18F04CCF00CD1015</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>9C519AF918F58D3900CD1015</string>
+				<string>9C5199FA18F0A71800CD1015</string>
+				<string>9C5199F818F0A70E00CD1015</string>
+				<string>9C5199F618F0A70300CD1015</string>
+				<string>9C5199D918F05CC500CD1015</string>
+				<string>9C5199D718F05CBA00CD1015</string>
+				<string>9C5199D518F05CB100CD1015</string>
+				<string>9C5199D318F05CA700CD1015</string>
+				<string>9C5199D118F05C9D00CD1015</string>
+				<string>9C5199CF18F05C9300CD1015</string>
+				<string>9C5199CD18F05C8500CD1015</string>
+				<string>9C5199CB18F05C7900CD1015</string>
+				<string>9C5199C918F05C6E00CD1015</string>
+				<string>9C5199C718F05C5000CD1015</string>
+				<string>9C51998B18F04CCF00CD1015</string>
+				<string>9C51998D18F04CCF00CD1015</string>
+				<string>9C51998F18F04CCF00CD1015</string>
+				<string>9C5199AA18F04CD100CD1015</string>
+				<string>1745133F77F9422BBFE452F6</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Frameworks</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>9C51998B18F04CCF00CD1015</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>wrapper.framework</string>
+			<key>name</key>
+			<string>Foundation.framework</string>
+			<key>path</key>
+			<string>System/Library/Frameworks/Foundation.framework</string>
+			<key>sourceTree</key>
+			<string>SDKROOT</string>
+		</dict>
+		<key>9C51998C18F04CCF00CD1015</key>
+		<dict>
+			<key>fileRef</key>
+			<string>9C51998B18F04CCF00CD1015</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>9C51998D18F04CCF00CD1015</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>wrapper.framework</string>
+			<key>name</key>
+			<string>CoreGraphics.framework</string>
+			<key>path</key>
+			<string>System/Library/Frameworks/CoreGraphics.framework</string>
+			<key>sourceTree</key>
+			<string>SDKROOT</string>
+		</dict>
+		<key>9C51998E18F04CCF00CD1015</key>
+		<dict>
+			<key>fileRef</key>
+			<string>9C51998D18F04CCF00CD1015</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>9C51998F18F04CCF00CD1015</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>wrapper.framework</string>
+			<key>name</key>
+			<string>UIKit.framework</string>
+			<key>path</key>
+			<string>System/Library/Frameworks/UIKit.framework</string>
+			<key>sourceTree</key>
+			<string>SDKROOT</string>
+		</dict>
+		<key>9C51999018F04CCF00CD1015</key>
+		<dict>
+			<key>fileRef</key>
+			<string>9C51998F18F04CCF00CD1015</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>9C51999118F04CCF00CD1015</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>9C51999A18F04CD000CD1015</string>
+				<string>9C51999B18F04CD000CD1015</string>
+				<string>9C5199DC18F05D1900CD1015</string>
+				<string>9C519A6518F0CDA400CD1015</string>
+				<string>9C5199DB18F05CE000CD1015</string>
+				<string>9C5199DF18F0792900CD1015</string>
+				<string>9C5199E018F07B6A00CD1015</string>
+				<string>9C5199EE18F09B3F00CD1015</string>
+				<string>9C519AF818F58D1600CD1015</string>
+				<string>9C5199A318F04CD000CD1015</string>
+				<string>9C5199EB18F0972100CD1015</string>
+				<string>9C51999218F04CD000CD1015</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>path</key>
+			<string>Tweacon</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>9C51999218F04CD000CD1015</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>9C51999318F04CD000CD1015</string>
+				<string>9C51999418F04CD000CD1015</string>
+				<string>9C51999718F04CD000CD1015</string>
+				<string>9C51999918F04CD000CD1015</string>
+				<string>9C519A1518F0B1B100CD1015</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Supporting Files</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>9C51999318F04CD000CD1015</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.plist.xml</string>
+			<key>path</key>
+			<string>Tweacon-Info.plist</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>9C51999418F04CD000CD1015</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>9C51999518F04CD000CD1015</string>
+			</array>
+			<key>isa</key>
+			<string>PBXVariantGroup</string>
+			<key>name</key>
+			<string>InfoPlist.strings</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>9C51999518F04CD000CD1015</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.plist.strings</string>
+			<key>name</key>
+			<string>en</string>
+			<key>path</key>
+			<string>en.lproj/InfoPlist.strings</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>9C51999618F04CD000CD1015</key>
+		<dict>
+			<key>fileRef</key>
+			<string>9C51999418F04CD000CD1015</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>9C51999718F04CD000CD1015</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>main.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>9C51999818F04CD000CD1015</key>
+		<dict>
+			<key>fileRef</key>
+			<string>9C51999718F04CD000CD1015</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>9C51999918F04CD000CD1015</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>Tweacon-Prefix.pch</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>9C51999A18F04CD000CD1015</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>NTRAppDelegate.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>9C51999B18F04CD000CD1015</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>NTRAppDelegate.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>9C51999C18F04CD000CD1015</key>
+		<dict>
+			<key>fileRef</key>
+			<string>9C51999B18F04CD000CD1015</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>9C51999D18F04CD000CD1015</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>9C51999E18F04CD000CD1015</string>
+			</array>
+			<key>isa</key>
+			<string>PBXVariantGroup</string>
+			<key>name</key>
+			<string>Main.storyboard</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>9C51999E18F04CD000CD1015</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>file.storyboard</string>
+			<key>name</key>
+			<string>Base</string>
+			<key>path</key>
+			<string>Base.lproj/Main.storyboard</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>9C51999F18F04CD000CD1015</key>
+		<dict>
+			<key>fileRef</key>
+			<string>9C51999D18F04CD000CD1015</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>9C5199A018F04CD000CD1015</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>NTRLoginViewController.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>9C5199A118F04CD000CD1015</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>NTRLoginViewController.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>9C5199A218F04CD000CD1015</key>
+		<dict>
+			<key>fileRef</key>
+			<string>9C5199A118F04CD000CD1015</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>9C5199A318F04CD000CD1015</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>folder.assetcatalog</string>
+			<key>path</key>
+			<string>Images.xcassets</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>9C5199A418F04CD000CD1015</key>
+		<dict>
+			<key>fileRef</key>
+			<string>9C5199A318F04CD000CD1015</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>9C5199A518F04CD100CD1015</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>9C5199B718F04CD100CD1015</string>
+			</array>
+			<key>isa</key>
+			<string>PBXSourcesBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>9C5199A618F04CD100CD1015</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>9C5199AB18F04CD100CD1015</string>
+				<string>9C5199AD18F04CD100CD1015</string>
+				<string>9C5199AC18F04CD100CD1015</string>
+			</array>
+			<key>isa</key>
+			<string>PBXFrameworksBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>9C5199A718F04CD100CD1015</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>9C5199B518F04CD100CD1015</string>
+			</array>
+			<key>isa</key>
+			<string>PBXResourcesBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>9C5199A818F04CD100CD1015</key>
+		<dict>
+			<key>buildConfigurationList</key>
+			<string>9C5199BD18F04CD100CD1015</string>
+			<key>buildPhases</key>
+			<array>
+				<string>9C5199A518F04CD100CD1015</string>
+				<string>9C5199A618F04CD100CD1015</string>
+				<string>9C5199A718F04CD100CD1015</string>
+			</array>
+			<key>buildRules</key>
+			<array/>
+			<key>dependencies</key>
+			<array>
+				<string>9C5199AF18F04CD100CD1015</string>
+			</array>
+			<key>isa</key>
+			<string>PBXNativeTarget</string>
+			<key>name</key>
+			<string>TweaconTests</string>
+			<key>productName</key>
+			<string>TweaconTests</string>
+			<key>productReference</key>
+			<string>9C5199A918F04CD100CD1015</string>
+			<key>productType</key>
+			<string>com.apple.product-type.bundle.unit-test</string>
+		</dict>
+		<key>9C5199A918F04CD100CD1015</key>
+		<dict>
+			<key>explicitFileType</key>
+			<string>wrapper.cfbundle</string>
+			<key>includeInIndex</key>
+			<string>0</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>path</key>
+			<string>TweaconTests.xctest</string>
+			<key>sourceTree</key>
+			<string>BUILT_PRODUCTS_DIR</string>
+		</dict>
+		<key>9C5199AA18F04CD100CD1015</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>wrapper.framework</string>
+			<key>name</key>
+			<string>XCTest.framework</string>
+			<key>path</key>
+			<string>Library/Frameworks/XCTest.framework</string>
+			<key>sourceTree</key>
+			<string>DEVELOPER_DIR</string>
+		</dict>
+		<key>9C5199AB18F04CD100CD1015</key>
+		<dict>
+			<key>fileRef</key>
+			<string>9C5199AA18F04CD100CD1015</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>9C5199AC18F04CD100CD1015</key>
+		<dict>
+			<key>fileRef</key>
+			<string>9C51998B18F04CCF00CD1015</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>9C5199AD18F04CD100CD1015</key>
+		<dict>
+			<key>fileRef</key>
+			<string>9C51998F18F04CCF00CD1015</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>9C5199AE18F04CD100CD1015</key>
+		<dict>
+			<key>containerPortal</key>
+			<string>9C51998018F04CCF00CD1015</string>
+			<key>isa</key>
+			<string>PBXContainerItemProxy</string>
+			<key>proxyType</key>
+			<string>1</string>
+			<key>remoteGlobalIDString</key>
+			<string>9C51998718F04CCF00CD1015</string>
+			<key>remoteInfo</key>
+			<string>Tweacon</string>
+		</dict>
+		<key>9C5199AF18F04CD100CD1015</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXTargetDependency</string>
+			<key>target</key>
+			<string>9C51998718F04CCF00CD1015</string>
+			<key>targetProxy</key>
+			<string>9C5199AE18F04CD100CD1015</string>
+		</dict>
+		<key>9C5199B018F04CD100CD1015</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>9C5199B618F04CD100CD1015</string>
+				<string>9C5199B118F04CD100CD1015</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>path</key>
+			<string>TweaconTests</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>9C5199B118F04CD100CD1015</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>9C5199B218F04CD100CD1015</string>
+				<string>9C5199B318F04CD100CD1015</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Supporting Files</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>9C5199B218F04CD100CD1015</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.plist.xml</string>
+			<key>path</key>
+			<string>TweaconTests-Info.plist</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>9C5199B318F04CD100CD1015</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>9C5199B418F04CD100CD1015</string>
+			</array>
+			<key>isa</key>
+			<string>PBXVariantGroup</string>
+			<key>name</key>
+			<string>InfoPlist.strings</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>9C5199B418F04CD100CD1015</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.plist.strings</string>
+			<key>name</key>
+			<string>en</string>
+			<key>path</key>
+			<string>en.lproj/InfoPlist.strings</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>9C5199B518F04CD100CD1015</key>
+		<dict>
+			<key>fileRef</key>
+			<string>9C5199B318F04CD100CD1015</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>9C5199B618F04CD100CD1015</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>TweaconTests.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>9C5199B718F04CD100CD1015</key>
+		<dict>
+			<key>fileRef</key>
+			<string>9C5199B618F04CD100CD1015</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>9C5199B818F04CD100CD1015</key>
+		<dict>
+			<key>buildSettings</key>
+			<dict>
+				<key>ALWAYS_SEARCH_USER_PATHS</key>
+				<string>NO</string>
+				<key>CLANG_CXX_LANGUAGE_STANDARD</key>
+				<string>gnu++0x</string>
+				<key>CLANG_CXX_LIBRARY</key>
+				<string>libc++</string>
+				<key>CLANG_ENABLE_MODULES</key>
+				<string>YES</string>
+				<key>CLANG_ENABLE_OBJC_ARC</key>
+				<string>YES</string>
+				<key>CLANG_WARN_BOOL_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_CONSTANT_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_DIRECT_OBJC_ISA_USAGE</key>
+				<string>YES_ERROR</string>
+				<key>CLANG_WARN_EMPTY_BODY</key>
+				<string>YES</string>
+				<key>CLANG_WARN_ENUM_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_INT_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_OBJC_ROOT_CLASS</key>
+				<string>YES_ERROR</string>
+				<key>CLANG_WARN__DUPLICATE_METHOD_MATCH</key>
+				<string>YES</string>
+				<key>CODE_SIGN_IDENTITY[sdk=iphoneos*]</key>
+				<string>iPhone Developer</string>
+				<key>COPY_PHASE_STRIP</key>
+				<string>NO</string>
+				<key>GCC_C_LANGUAGE_STANDARD</key>
+				<string>gnu99</string>
+				<key>GCC_DYNAMIC_NO_PIC</key>
+				<string>NO</string>
+				<key>GCC_OPTIMIZATION_LEVEL</key>
+				<string>0</string>
+				<key>GCC_PREPROCESSOR_DEFINITIONS</key>
+				<array>
+					<string>DEBUG=1</string>
+					<string>$(inherited)</string>
+				</array>
+				<key>GCC_SYMBOLS_PRIVATE_EXTERN</key>
+				<string>NO</string>
+				<key>GCC_WARN_64_TO_32_BIT_CONVERSION</key>
+				<string>YES</string>
+				<key>GCC_WARN_ABOUT_RETURN_TYPE</key>
+				<string>YES_ERROR</string>
+				<key>GCC_WARN_UNDECLARED_SELECTOR</key>
+				<string>YES</string>
+				<key>GCC_WARN_UNINITIALIZED_AUTOS</key>
+				<string>YES_AGGRESSIVE</string>
+				<key>GCC_WARN_UNUSED_FUNCTION</key>
+				<string>YES</string>
+				<key>GCC_WARN_UNUSED_VARIABLE</key>
+				<string>YES</string>
+				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
+				<string>7.1</string>
+				<key>ONLY_ACTIVE_ARCH</key>
+				<string>YES</string>
+				<key>SDKROOT</key>
+				<string>iphoneos</string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Debug</string>
+		</dict>
+		<key>9C5199B918F04CD100CD1015</key>
+		<dict>
+			<key>buildSettings</key>
+			<dict>
+				<key>ALWAYS_SEARCH_USER_PATHS</key>
+				<string>NO</string>
+				<key>CLANG_CXX_LANGUAGE_STANDARD</key>
+				<string>gnu++0x</string>
+				<key>CLANG_CXX_LIBRARY</key>
+				<string>libc++</string>
+				<key>CLANG_ENABLE_MODULES</key>
+				<string>YES</string>
+				<key>CLANG_ENABLE_OBJC_ARC</key>
+				<string>YES</string>
+				<key>CLANG_WARN_BOOL_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_CONSTANT_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_DIRECT_OBJC_ISA_USAGE</key>
+				<string>YES_ERROR</string>
+				<key>CLANG_WARN_EMPTY_BODY</key>
+				<string>YES</string>
+				<key>CLANG_WARN_ENUM_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_INT_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_OBJC_ROOT_CLASS</key>
+				<string>YES_ERROR</string>
+				<key>CLANG_WARN__DUPLICATE_METHOD_MATCH</key>
+				<string>YES</string>
+				<key>CODE_SIGN_IDENTITY[sdk=iphoneos*]</key>
+				<string>iPhone Developer</string>
+				<key>COPY_PHASE_STRIP</key>
+				<string>YES</string>
+				<key>ENABLE_NS_ASSERTIONS</key>
+				<string>NO</string>
+				<key>GCC_C_LANGUAGE_STANDARD</key>
+				<string>gnu99</string>
+				<key>GCC_WARN_64_TO_32_BIT_CONVERSION</key>
+				<string>YES</string>
+				<key>GCC_WARN_ABOUT_RETURN_TYPE</key>
+				<string>YES_ERROR</string>
+				<key>GCC_WARN_UNDECLARED_SELECTOR</key>
+				<string>YES</string>
+				<key>GCC_WARN_UNINITIALIZED_AUTOS</key>
+				<string>YES_AGGRESSIVE</string>
+				<key>GCC_WARN_UNUSED_FUNCTION</key>
+				<string>YES</string>
+				<key>GCC_WARN_UNUSED_VARIABLE</key>
+				<string>YES</string>
+				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
+				<string>7.1</string>
+				<key>SDKROOT</key>
+				<string>iphoneos</string>
+				<key>VALIDATE_PRODUCT</key>
+				<string>YES</string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Release</string>
+		</dict>
+		<key>9C5199BA18F04CD100CD1015</key>
+		<dict>
+			<key>buildConfigurations</key>
+			<array>
+				<string>9C5199BB18F04CD100CD1015</string>
+				<string>9C5199BC18F04CD100CD1015</string>
+			</array>
+			<key>defaultConfigurationIsVisible</key>
+			<string>0</string>
+			<key>defaultConfigurationName</key>
+			<string>Release</string>
+			<key>isa</key>
+			<string>XCConfigurationList</string>
+		</dict>
+		<key>9C5199BB18F04CD100CD1015</key>
+		<dict>
+			<key>baseConfigurationReference</key>
+			<string>87CB1979083745BD8563409E</string>
+			<key>buildSettings</key>
+			<dict>
+				<key>ASSETCATALOG_COMPILER_APPICON_NAME</key>
+				<string>AppIcon</string>
+				<key>ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME</key>
+				<string>LaunchImage</string>
+				<key>FRAMEWORK_SEARCH_PATHS</key>
+				<array>
+					<string>$(inherited)</string>
+					<string>$(PROJECT_DIR)</string>
+				</array>
+				<key>GCC_PRECOMPILE_PREFIX_HEADER</key>
+				<string>YES</string>
+				<key>GCC_PREFIX_HEADER</key>
+				<string>Tweacon/Tweacon-Prefix.pch</string>
+				<key>HEADER_SEARCH_PATHS[arch=*]</key>
+				<array>
+					<string>$(inherited)</string>
+					<string>/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include</string>
+				</array>
+				<key>INFOPLIST_FILE</key>
+				<string>Tweacon/Tweacon-Info.plist</string>
+				<key>OTHER_LDFLAGS[arch=*]</key>
+				<string>-all_load</string>
+				<key>PRODUCT_NAME</key>
+				<string>$(TARGET_NAME)</string>
+				<key>WRAPPER_EXTENSION</key>
+				<string>app</string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Debug</string>
+		</dict>
+		<key>9C5199BC18F04CD100CD1015</key>
+		<dict>
+			<key>baseConfigurationReference</key>
+			<string>87CB1979083745BD8563409E</string>
+			<key>buildSettings</key>
+			<dict>
+				<key>ASSETCATALOG_COMPILER_APPICON_NAME</key>
+				<string>AppIcon</string>
+				<key>ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME</key>
+				<string>LaunchImage</string>
+				<key>FRAMEWORK_SEARCH_PATHS</key>
+				<array>
+					<string>$(inherited)</string>
+					<string>$(PROJECT_DIR)</string>
+				</array>
+				<key>GCC_PRECOMPILE_PREFIX_HEADER</key>
+				<string>YES</string>
+				<key>GCC_PREFIX_HEADER</key>
+				<string>Tweacon/Tweacon-Prefix.pch</string>
+				<key>INFOPLIST_FILE</key>
+				<string>Tweacon/Tweacon-Info.plist</string>
+				<key>OTHER_LDFLAGS[arch=*]</key>
+				<string>-all_load</string>
+				<key>PRODUCT_NAME</key>
+				<string>$(TARGET_NAME)</string>
+				<key>WRAPPER_EXTENSION</key>
+				<string>app</string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Release</string>
+		</dict>
+		<key>9C5199BD18F04CD100CD1015</key>
+		<dict>
+			<key>buildConfigurations</key>
+			<array>
+				<string>9C5199BE18F04CD100CD1015</string>
+				<string>9C5199BF18F04CD100CD1015</string>
+			</array>
+			<key>defaultConfigurationIsVisible</key>
+			<string>0</string>
+			<key>defaultConfigurationName</key>
+			<string>Release</string>
+			<key>isa</key>
+			<string>XCConfigurationList</string>
+		</dict>
+		<key>9C5199BE18F04CD100CD1015</key>
+		<dict>
+			<key>buildSettings</key>
+			<dict>
+				<key>BUNDLE_LOADER</key>
+				<string>$(BUILT_PRODUCTS_DIR)/Tweacon.app/Tweacon</string>
+				<key>FRAMEWORK_SEARCH_PATHS</key>
+				<array>
+					<string>$(SDKROOT)/Developer/Library/Frameworks</string>
+					<string>$(inherited)</string>
+					<string>$(DEVELOPER_FRAMEWORKS_DIR)</string>
+				</array>
+				<key>GCC_PRECOMPILE_PREFIX_HEADER</key>
+				<string>YES</string>
+				<key>GCC_PREFIX_HEADER</key>
+				<string>Tweacon/Tweacon-Prefix.pch</string>
+				<key>GCC_PREPROCESSOR_DEFINITIONS</key>
+				<array>
+					<string>DEBUG=1</string>
+					<string>$(inherited)</string>
+				</array>
+				<key>INFOPLIST_FILE</key>
+				<string>TweaconTests/TweaconTests-Info.plist</string>
+				<key>PRODUCT_NAME</key>
+				<string>$(TARGET_NAME)</string>
+				<key>TEST_HOST</key>
+				<string>$(BUNDLE_LOADER)</string>
+				<key>WRAPPER_EXTENSION</key>
+				<string>xctest</string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Debug</string>
+		</dict>
+		<key>9C5199BF18F04CD100CD1015</key>
+		<dict>
+			<key>buildSettings</key>
+			<dict>
+				<key>BUNDLE_LOADER</key>
+				<string>$(BUILT_PRODUCTS_DIR)/Tweacon.app/Tweacon</string>
+				<key>FRAMEWORK_SEARCH_PATHS</key>
+				<array>
+					<string>$(SDKROOT)/Developer/Library/Frameworks</string>
+					<string>$(inherited)</string>
+					<string>$(DEVELOPER_FRAMEWORKS_DIR)</string>
+				</array>
+				<key>GCC_PRECOMPILE_PREFIX_HEADER</key>
+				<string>YES</string>
+				<key>GCC_PREFIX_HEADER</key>
+				<string>Tweacon/Tweacon-Prefix.pch</string>
+				<key>INFOPLIST_FILE</key>
+				<string>TweaconTests/TweaconTests-Info.plist</string>
+				<key>PRODUCT_NAME</key>
+				<string>$(TARGET_NAME)</string>
+				<key>TEST_HOST</key>
+				<string>$(BUNDLE_LOADER)</string>
+				<key>WRAPPER_EXTENSION</key>
+				<string>xctest</string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Release</string>
+		</dict>
+		<key>9C5199C718F05C5000CD1015</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>wrapper.framework</string>
+			<key>path</key>
+			<string>Parse.framework</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>9C5199C818F05C5000CD1015</key>
+		<dict>
+			<key>fileRef</key>
+			<string>9C5199C718F05C5000CD1015</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>9C5199C918F05C6E00CD1015</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>wrapper.framework</string>
+			<key>name</key>
+			<string>AudioToolbox.framework</string>
+			<key>path</key>
+			<string>System/Library/Frameworks/AudioToolbox.framework</string>
+			<key>sourceTree</key>
+			<string>SDKROOT</string>
+		</dict>
+		<key>9C5199CA18F05C6E00CD1015</key>
+		<dict>
+			<key>fileRef</key>
+			<string>9C5199C918F05C6E00CD1015</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>9C5199CB18F05C7900CD1015</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>wrapper.framework</string>
+			<key>name</key>
+			<string>CFNetwork.framework</string>
+			<key>path</key>
+			<string>System/Library/Frameworks/CFNetwork.framework</string>
+			<key>sourceTree</key>
+			<string>SDKROOT</string>
+		</dict>
+		<key>9C5199CC18F05C7900CD1015</key>
+		<dict>
+			<key>fileRef</key>
+			<string>9C5199CB18F05C7900CD1015</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>9C5199CD18F05C8500CD1015</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>wrapper.framework</string>
+			<key>name</key>
+			<string>CoreLocation.framework</string>
+			<key>path</key>
+			<string>System/Library/Frameworks/CoreLocation.framework</string>
+			<key>sourceTree</key>
+			<string>SDKROOT</string>
+		</dict>
+		<key>9C5199CE18F05C8500CD1015</key>
+		<dict>
+			<key>fileRef</key>
+			<string>9C5199CD18F05C8500CD1015</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>9C5199CF18F05C9300CD1015</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>compiled.mach-o.dylib</string>
+			<key>name</key>
+			<string>libz.1.1.3.dylib</string>
+			<key>path</key>
+			<string>usr/lib/libz.1.1.3.dylib</string>
+			<key>sourceTree</key>
+			<string>SDKROOT</string>
+		</dict>
+		<key>9C5199D018F05C9300CD1015</key>
+		<dict>
+			<key>fileRef</key>
+			<string>9C5199CF18F05C9300CD1015</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>9C5199D118F05C9D00CD1015</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>wrapper.framework</string>
+			<key>name</key>
+			<string>MobileCoreServices.framework</string>
+			<key>path</key>
+			<string>System/Library/Frameworks/MobileCoreServices.framework</string>
+			<key>sourceTree</key>
+			<string>SDKROOT</string>
+		</dict>
+		<key>9C5199D218F05C9D00CD1015</key>
+		<dict>
+			<key>fileRef</key>
+			<string>9C5199D118F05C9D00CD1015</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>9C5199D318F05CA700CD1015</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>wrapper.framework</string>
+			<key>name</key>
+			<string>QuartzCore.framework</string>
+			<key>path</key>
+			<string>System/Library/Frameworks/QuartzCore.framework</string>
+			<key>sourceTree</key>
+			<string>SDKROOT</string>
+		</dict>
+		<key>9C5199D418F05CA700CD1015</key>
+		<dict>
+			<key>fileRef</key>
+			<string>9C5199D318F05CA700CD1015</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>9C5199D518F05CB100CD1015</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>wrapper.framework</string>
+			<key>name</key>
+			<string>Security.framework</string>
+			<key>path</key>
+			<string>System/Library/Frameworks/Security.framework</string>
+			<key>sourceTree</key>
+			<string>SDKROOT</string>
+		</dict>
+		<key>9C5199D618F05CB100CD1015</key>
+		<dict>
+			<key>fileRef</key>
+			<string>9C5199D518F05CB100CD1015</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>9C5199D718F05CBA00CD1015</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>wrapper.framework</string>
+			<key>name</key>
+			<string>StoreKit.framework</string>
+			<key>path</key>
+			<string>System/Library/Frameworks/StoreKit.framework</string>
+			<key>sourceTree</key>
+			<string>SDKROOT</string>
+		</dict>
+		<key>9C5199D818F05CBA00CD1015</key>
+		<dict>
+			<key>fileRef</key>
+			<string>9C5199D718F05CBA00CD1015</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>9C5199D918F05CC500CD1015</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>wrapper.framework</string>
+			<key>name</key>
+			<string>SystemConfiguration.framework</string>
+			<key>path</key>
+			<string>System/Library/Frameworks/SystemConfiguration.framework</string>
+			<key>sourceTree</key>
+			<string>SDKROOT</string>
+		</dict>
+		<key>9C5199DA18F05CC500CD1015</key>
+		<dict>
+			<key>fileRef</key>
+			<string>9C5199D918F05CC500CD1015</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>9C5199DB18F05CE000CD1015</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>9C5199A018F04CD000CD1015</string>
+				<string>9C5199A118F04CD000CD1015</string>
+				<string>9C7C8B2A18F6DC7200E88754</string>
+				<string>9C7C8B2B18F6DC7200E88754</string>
+				<string>9C7C8B2D18F6E1D600E88754</string>
+				<string>9C7C8B2E18F6E1D600E88754</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>ViewControllers</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>9C5199DC18F05D1900CD1015</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>NTRConstants.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>9C5199DF18F0792900CD1015</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>9C5199E718F095F800CD1015</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Views</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>9C5199E018F07B6A00CD1015</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>9C5199E118F07F8500CD1015</string>
+				<string>9C5199E218F07F8500CD1015</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Models</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>9C5199E118F07F8500CD1015</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>NTRUser.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>9C5199E218F07F8500CD1015</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>NTRUser.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>9C5199E318F07F8500CD1015</key>
+		<dict>
+			<key>fileRef</key>
+			<string>9C5199E218F07F8500CD1015</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>9C5199E718F095F800CD1015</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>9C51999D18F04CD000CD1015</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>storyboards</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>9C5199EB18F0972100CD1015</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>9C519A6818F0CE6A00CD1015</string>
+				<string>9C519A6718F0CE5800CD1015</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Vendors</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>9C5199EE18F09B3F00CD1015</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>9C5199EF18F09B9F00CD1015</string>
+				<string>9C5199F018F09B9F00CD1015</string>
+				<string>9C5199F518F0A23000CD1015</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Networking</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>9C5199EF18F09B9F00CD1015</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>NTRTwitterClient.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>9C5199F018F09B9F00CD1015</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>NTRTwitterClient.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>9C5199F118F09B9F00CD1015</key>
+		<dict>
+			<key>fileRef</key>
+			<string>9C5199F018F09B9F00CD1015</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>9C5199F218F0A20D00CD1015</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>NTRConstants+TwitterClientExtensions.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>9C5199F318F0A20D00CD1015</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>NTRConstants+TwitterClientExtensions.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>9C5199F418F0A20D00CD1015</key>
+		<dict>
+			<key>fileRef</key>
+			<string>9C5199F318F0A20D00CD1015</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>9C5199F518F0A23000CD1015</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>9C5199F218F0A20D00CD1015</string>
+				<string>9C5199F318F0A20D00CD1015</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Helpers</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>9C5199F618F0A70300CD1015</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>wrapper.framework</string>
+			<key>name</key>
+			<string>Accounts.framework</string>
+			<key>path</key>
+			<string>System/Library/Frameworks/Accounts.framework</string>
+			<key>sourceTree</key>
+			<string>SDKROOT</string>
+		</dict>
+		<key>9C5199F718F0A70300CD1015</key>
+		<dict>
+			<key>fileRef</key>
+			<string>9C5199F618F0A70300CD1015</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>9C5199F818F0A70E00CD1015</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>wrapper.framework</string>
+			<key>name</key>
+			<string>Twitter.framework</string>
+			<key>path</key>
+			<string>System/Library/Frameworks/Twitter.framework</string>
+			<key>sourceTree</key>
+			<string>SDKROOT</string>
+		</dict>
+		<key>9C5199F918F0A70E00CD1015</key>
+		<dict>
+			<key>fileRef</key>
+			<string>9C5199F818F0A70E00CD1015</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>9C5199FA18F0A71800CD1015</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>wrapper.framework</string>
+			<key>name</key>
+			<string>Social.framework</string>
+			<key>path</key>
+			<string>System/Library/Frameworks/Social.framework</string>
+			<key>sourceTree</key>
+			<string>SDKROOT</string>
+		</dict>
+		<key>9C5199FB18F0A71800CD1015</key>
+		<dict>
+			<key>fileRef</key>
+			<string>9C5199FA18F0A71800CD1015</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>9C519A1518F0B1B100CD1015</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>FBMissingSymbols.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>9C519A1618F0B1B100CD1015</key>
+		<dict>
+			<key>fileRef</key>
+			<string>9C519A1518F0B1B100CD1015</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>9C519A5018F0BD1C00CD1015</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>9C519A5118F0BD1C00CD1015</string>
+				<string>9C519A5218F0BD1C00CD1015</string>
+				<string>9C519A5318F0BD1C00CD1015</string>
+				<string>9C519A5418F0BD1C00CD1015</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>path</key>
+			<string>TwitterReverseAuth</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>9C519A5118F0BD1C00CD1015</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>TWAPIManager.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>9C519A5218F0BD1C00CD1015</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>TWAPIManager.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>9C519A5318F0BD1C00CD1015</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>TWSignedRequest.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>9C519A5418F0BD1C00CD1015</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>TWSignedRequest.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>9C519A5518F0BD1C00CD1015</key>
+		<dict>
+			<key>fileRef</key>
+			<string>9C519A5218F0BD1C00CD1015</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>9C519A5618F0BD1C00CD1015</key>
+		<dict>
+			<key>fileRef</key>
+			<string>9C519A5418F0BD1C00CD1015</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>9C519A5718F0BD2700CD1015</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>PFTwitterUtils+NativeTwitter.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>9C519A5818F0BD2700CD1015</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>PFTwitterUtils+NativeTwitter.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>9C519A5918F0BD2700CD1015</key>
+		<dict>
+			<key>fileRef</key>
+			<string>9C519A5818F0BD2700CD1015</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>9C519A5B18F0BDD200CD1015</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>9C519A5C18F0BDD200CD1015</string>
+				<string>9C519A5D18F0BDD200CD1015</string>
+				<string>9C519A5E18F0BDD200CD1015</string>
+				<string>9C519A5F18F0BDD200CD1015</string>
+				<string>9C519A6018F0BDD200CD1015</string>
+				<string>9C519A6118F0BDD200CD1015</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>path</key>
+			<string>ABOAuthCore</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>9C519A5C18F0BDD200CD1015</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>NSData+Base64.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>9C519A5D18F0BDD200CD1015</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>NSData+Base64.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>9C519A5E18F0BDD200CD1015</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>OAuth+Additions.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>9C519A5F18F0BDD200CD1015</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>OAuth+Additions.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>9C519A6018F0BDD200CD1015</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>OAuthCore.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>9C519A6118F0BDD200CD1015</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>OAuthCore.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>9C519A6218F0BDD200CD1015</key>
+		<dict>
+			<key>fileRef</key>
+			<string>9C519A5D18F0BDD200CD1015</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>9C519A6318F0BDD200CD1015</key>
+		<dict>
+			<key>fileRef</key>
+			<string>9C519A5F18F0BDD200CD1015</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>9C519A6418F0BDD200CD1015</key>
+		<dict>
+			<key>fileRef</key>
+			<string>9C519A6118F0BDD200CD1015</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>9C519A6518F0CDA400CD1015</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>NTRConstants.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>9C519A6618F0CDA400CD1015</key>
+		<dict>
+			<key>fileRef</key>
+			<string>9C519A6518F0CDA400CD1015</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>9C519A6718F0CE5800CD1015</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>9C519A5718F0BD2700CD1015</string>
+				<string>9C519A5818F0BD2700CD1015</string>
+				<string>9C519A5B18F0BDD200CD1015</string>
+				<string>9C519A5018F0BD1C00CD1015</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>PFTwitterUtils+NativeTwitter</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>9C519A6818F0CE6A00CD1015</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>9C519A6918F0CE8300CD1015</string>
+				<string>9C519A6A18F0CE8300CD1015</string>
+				<string>9C519A6C18F0CF2100CD1015</string>
+				<string>9C519A6D18F0CF2100CD1015</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>FHSTwitterEngine</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>9C519A6918F0CE8300CD1015</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>FHSTwitterEngine.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>9C519A6A18F0CE8300CD1015</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>FHSTwitterEngine.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>9C519A6B18F0CE8300CD1015</key>
+		<dict>
+			<key>fileRef</key>
+			<string>9C519A6A18F0CE8300CD1015</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>9C519A6C18F0CF2100CD1015</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>FHSStream.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>9C519A6D18F0CF2100CD1015</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>FHSStream.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>9C519A6E18F0CF2100CD1015</key>
+		<dict>
+			<key>fileRef</key>
+			<string>9C519A6D18F0CF2100CD1015</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>9C519AF518F58D0F00CD1015</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>NTRNearbyServicesManager.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>9C519AF618F58D0F00CD1015</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>NTRNearbyServicesManager.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>9C519AF718F58D0F00CD1015</key>
+		<dict>
+			<key>fileRef</key>
+			<string>9C519AF618F58D0F00CD1015</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>9C519AF818F58D1600CD1015</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>9C519AFE18F598C100CD1015</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Helpers</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>9C519AF918F58D3900CD1015</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>wrapper.framework</string>
+			<key>name</key>
+			<string>MultipeerConnectivity.framework</string>
+			<key>path</key>
+			<string>System/Library/Frameworks/MultipeerConnectivity.framework</string>
+			<key>sourceTree</key>
+			<string>SDKROOT</string>
+		</dict>
+		<key>9C519AFA18F58D3900CD1015</key>
+		<dict>
+			<key>fileRef</key>
+			<string>9C519AF918F58D3900CD1015</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>9C519AFB18F5989200CD1015</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>NTRConstants+MultipeerExtensions.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>9C519AFC18F5989200CD1015</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>NTRConstants+MultipeerExtensions.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>9C519AFD18F5989200CD1015</key>
+		<dict>
+			<key>fileRef</key>
+			<string>9C519AFC18F5989200CD1015</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>9C519AFE18F598C100CD1015</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>9C519AF518F58D0F00CD1015</string>
+				<string>9C519AF618F58D0F00CD1015</string>
+				<string>9C519AFB18F5989200CD1015</string>
+				<string>9C519AFC18F5989200CD1015</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Multipeer Connectivity</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>9C7C8B2A18F6DC7200E88754</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>NTRTweaconsTableViewController.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>9C7C8B2B18F6DC7200E88754</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>NTRTweaconsTableViewController.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>9C7C8B2C18F6DC7200E88754</key>
+		<dict>
+			<key>fileRef</key>
+			<string>9C7C8B2B18F6DC7200E88754</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>9C7C8B2D18F6E1D600E88754</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>NTRTwitterWebViewController.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>9C7C8B2E18F6E1D600E88754</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>NTRTwitterWebViewController.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>9C7C8B2F18F6E1D600E88754</key>
+		<dict>
+			<key>fileRef</key>
+			<string>9C7C8B2E18F6E1D600E88754</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>F8CED9A1CD64481F99B31DEC</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array/>
+			<key>inputPaths</key>
+			<array/>
+			<key>isa</key>
+			<string>PBXShellScriptBuildPhase</string>
+			<key>name</key>
+			<string>Check Pods Manifest.lock</string>
+			<key>outputPaths</key>
+			<array/>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+			<key>shellPath</key>
+			<string>/bin/sh</string>
+			<key>shellScript</key>
+			<string>diff "${PODS_ROOT}/../Podfile.lock" "${PODS_ROOT}/Manifest.lock" &gt; /dev/null
+if [[ $? != 0 ]] ; then
+    cat &lt;&lt; EOM
+error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.
+EOM
+    exit 1
+fi
+</string>
+			<key>showEnvVarsInLog</key>
+			<string>0</string>
+		</dict>
+	</dict>
+	<key>rootObject</key>
+	<string>9C51998018F04CCF00CD1015</string>
+</dict>
+</plist>
