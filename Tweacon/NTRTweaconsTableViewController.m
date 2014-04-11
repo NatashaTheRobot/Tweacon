@@ -11,6 +11,7 @@
 #import "NTRUser.h"
 #import "NTRTwitterWebViewController.h"
 #import <SDWebImage/UIImageView+WebCache.h>
+#import <SVProgressHUD/SVProgressHUD.h>
 
 @interface NTRTweaconsTableViewController ()
 
@@ -32,6 +33,8 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    [SVProgressHUD showWithStatus:@"Searching for Tweacons..." maskType:SVProgressHUDMaskTypeGradient];
 }
 
 - (void)dealloc
@@ -89,6 +92,7 @@
 
 - (void)onNearbyUserAdded
 {
+    [SVProgressHUD dismiss];
     self.nearbyUsers = [NTRNearbyServicesManager sharedManager].nearbyUsers;
     [self.tableView reloadData];
 }
@@ -97,6 +101,9 @@
 {
     self.nearbyUsers = [NTRNearbyServicesManager sharedManager].nearbyUsers;
     [self.tableView reloadData];
+    if ([self.nearbyUsers count] == 0) {
+        [SVProgressHUD showWithStatus:@"Searching for Tweacons..." maskType:SVProgressHUDMaskTypeGradient];
+    }
 }
 
 #pragma mark - Setter / Getter Overrides

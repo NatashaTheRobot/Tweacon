@@ -7,6 +7,7 @@
 //
 
 #import "NTRTwitterWebViewController.h"
+#import <SVProgressHUD/SVProgressHUD.h>
 
 static NSString * const twitterURL = @"https://twitter.com";
 
@@ -22,12 +23,19 @@ static NSString * const twitterURL = @"https://twitter.com";
 {
     [super viewDidLoad];
     
+    [SVProgressHUD showWithStatus:@"Loading..." maskType:SVProgressHUDMaskTypeGradient];
+    
     self.title = [NSString stringWithFormat:@"@%@", _screenName];
     
     NSString *urlString = [NSString stringWithFormat:@"%@/%@", twitterURL, _screenName];
     NSURL *url = [NSURL URLWithString:urlString];
     NSURLRequest *request = [NSURLRequest requestWithURL:url];
     [_webView loadRequest:request];
+}
+
+- (void)webViewDidFinishLoad:(UIWebView *)webView
+{
+    [SVProgressHUD dismiss];
 }
 
 @end
