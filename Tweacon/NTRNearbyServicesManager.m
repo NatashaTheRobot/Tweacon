@@ -51,9 +51,12 @@ static NTRNearbyServicesManager *nearbyServicesManager;
 - (void)advertiseUser
 {
     if (self.user) {
-        NSDictionary *discoveryInfo = @{};
+        NSMutableDictionary *discoveryInfo = [NSMutableDictionary dictionaryWithCapacity:2];
         if (self.user[@"imageURL"]) {
-            discoveryInfo = @{@"imageURL" : self.user[@"imageURL"]};
+            discoveryInfo[@"imageURL"] = self.user[@"imageURL"];
+        }
+        if (self.user[@"profileDescription"]) {
+            discoveryInfo[@"profileDescription"] = self.user[@"profileDescription"];
         }
         self.advertiser = [[MCNearbyServiceAdvertiser alloc] initWithPeer:self.peerId discoveryInfo:discoveryInfo serviceType:@"Tweacon"];
         self.advertiser.delegate = self;
@@ -100,6 +103,7 @@ didReceiveInvitationFromPeer:(MCPeerID *)peerID
         NTRUser *user = [NTRUser new];
         user.screenName = peerID.displayName;
         user.imageURL = info[@"imageURL"];
+        user.profileDescription = info[@"profileDescription"];
         
         [self.nearbyUsers addObject:user];
         [[NSNotificationCenter defaultCenter] postNotificationName:NTRNotificationMultipeerConnectivityUserAdded object:nil];

@@ -68,6 +68,7 @@
     
     NTRUser *user = self.nearbyUsers[indexPath.row];
     cell.textLabel.text = [NSString stringWithFormat:@"@%@", user.screenName];
+    cell.detailTextLabel.text = user.profileDescription;
     
     return cell;
 }
