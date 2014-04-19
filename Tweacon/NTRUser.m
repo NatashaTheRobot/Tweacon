@@ -19,6 +19,7 @@
 @dynamic imageURL;
 @dynamic profileDescription;
 @dynamic location;
+@dynamic backgroundImageURL;
 
 - (void)configureWithData:(NSDictionary *)data
 {
@@ -27,6 +28,7 @@
     self.profileDescription = data[@"description"];
     self.imageURL = [data[@"profile_image_url_https"] stringByReplacingOccurrencesOfString:@"_normal" withString:@"_bigger"];
     self.location = data[@"location"];
+    self.backgroundImageURL = [NSString stringWithFormat:@"%@/mobile_retina", data[@"profile_banner_url"]];
 }
 
 @end

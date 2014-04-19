@@ -13,6 +13,7 @@
 @property (strong, nonatomic) NSString *imageURL;
 @property (strong, nonatomic) NSString *profileDescription;
 @property (strong, nonatomic) NSString *location;
+@property (strong, nonatomic) NSString *backgroundImageURL;
 
 - (void)configureWithData:(NSDictionary *)data;
 
