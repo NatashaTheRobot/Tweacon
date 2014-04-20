@@ -69,16 +69,10 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:NSStringFromClass([NTRTweaconTableViewCell class]) forIndexPath:indexPath];
+    NTRTweaconTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:NSStringFromClass([NTRTweaconTableViewCell class]) forIndexPath:indexPath];
     
     NTRUser *user = self.nearbyUsers[indexPath.row];
-    cell.textLabel.text = [NSString stringWithFormat:@"@%@", user.screenName];
-    cell.detailTextLabel.text = user.profileDescription;
-    [cell.imageView setImageWithURL:[NSURL URLWithString:user.imageURL]
-                   placeholderImage:[UIImage imageNamed:@"placeholder"]
-                          completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType) {
-        
-    }];
+    [cell configureWithUserData:user];
     
     return cell;
 }

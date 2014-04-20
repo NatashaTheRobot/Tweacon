@@ -38,43 +38,46 @@
             </objects>
             <point key="canvasLocation" x="-309" y="66"/>
         </scene>
-        <!--Tweacons Table View Controller - Tweacons-->
+        <!--Tweacons Table View Controller - Nearby-->
         <scene sceneID="XLJ-Vn-Jim">
             <objects>
                 <tableViewController id="GI6-t9-1Dp" customClass="NTRTweaconsTableViewController" sceneMemberID="viewController">
-                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="66" sectionHeaderHeight="22" sectionFooterHeight="22" id="oTJ-HU-ZEm">
+                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="62" sectionHeaderHeight="22" sectionFooterHeight="22" id="oTJ-HU-ZEm">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="NTRTweaconTableViewCell" textLabel="FJt-om-FPX" detailTextLabel="oXR-fl-7Yl" imageView="QXl-E2-UKZ" rowHeight="66" style="IBUITableViewCellStyleSubtitle" id="yp9-eE-nSQ" customClass="NTRTweaconTableViewCell">
-                                <rect key="frame" x="0.0" y="86" width="320" height="66"/>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="NTRTweaconTableViewCell" rowHeight="62" id="yp9-eE-nSQ" customClass="NTRTweaconTableViewCell">
+                                <rect key="frame" x="0.0" y="86" width="320" height="62"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="yp9-eE-nSQ" id="0Ws-iZ-gui">
-                                    <rect key="frame" x="0.0" y="0.0" width="287" height="65"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="287" height="62"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="@natashatherobot" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="FJt-om-FPX">
-                                            <rect key="frame" x="66" y="14" width="147" height="22"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                        <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Subtitle" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="oXR-fl-7Yl">
-                                            <rect key="frame" x="66" y="36" width="43" height="15"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                        <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="placeholder" id="QXl-E2-UKZ">
-                                            <rect key="frame" x="15" y="14" width="36" height="36"/>
-                                            <autoresizingMask key="autoresizingMask"/>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="BEc-eL-sYe">
+                                            <rect key="frame" x="20" y="7" width="36" height="37"/>
+                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                         </imageView>
+                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Natasha Murashev" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6R7-5p-jxb">
+                                            <rect key="frame" x="64" y="7" width="233" height="22"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="18"/>
+                                            <color key="textColor" red="0.36862745099999999" green="0.4549019608" blue="0.4823529412" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="@natashatherobot" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Y5-c2-DvQ">
+                                            <rect key="frame" x="64" y="27" width="223" height="21"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="12"/>
+                                            <color key="textColor" red="0.62745098039215685" green="0.70196078431372544" blue="0.72549019607843135" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
                                     </subviews>
                                 </tableViewCellContentView>
                                 <connections>
+                                    <outlet property="nameLabel" destination="6R7-5p-jxb" id="Xgb-sc-qur"/>
+                                    <outlet property="profileImageView" destination="BEc-eL-sYe" id="ihh-Ah-yts"/>
+                                    <outlet property="screenNameLabel" destination="7Y5-c2-DvQ" id="os5-Zn-y6c"/>
                                     <segue destination="QuM-4X-oAq" kind="push" id="eyD-te-fN6"/>
                                 </connections>
                             </tableViewCell>
@@ -84,7 +87,7 @@
                             <outlet property="delegate" destination="GI6-t9-1Dp" id="4xi-om-sdg"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Tweacons" id="FKX-dy-Yf5"/>
+                    <navigationItem key="navigationItem" title="Nearby" id="FKX-dy-Yf5"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LgR-FB-RiS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -139,9 +142,6 @@
             <point key="canvasLocation" x="142" y="66"/>
         </scene>
     </scenes>
-    <resources>
-        <image name="placeholder" width="36" height="36"/>
-    </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
