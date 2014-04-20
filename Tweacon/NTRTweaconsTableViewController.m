@@ -12,6 +12,7 @@
 #import "NTRTwitterWebViewController.h"
 #import <SDWebImage/UIImageView+WebCache.h>
 #import <SVProgressHUD/SVProgressHUD.h>
+#import "NTRTweaconTableViewCell.h"
 
 @interface NTRTweaconsTableViewController ()
 
@@ -68,7 +69,7 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:NSStringFromClass([UITableViewCell class]) forIndexPath:indexPath];
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:NSStringFromClass([NTRTweaconTableViewCell class]) forIndexPath:indexPath];
     
     NTRUser *user = self.nearbyUsers[indexPath.row];
     cell.textLabel.text = [NSString stringWithFormat:@"@%@", user.screenName];

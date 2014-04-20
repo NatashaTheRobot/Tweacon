@@ -53,6 +53,7 @@
 		9C519AFD18F5989200CD1015 /* NTRConstants+MultipeerExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C519AFC18F5989200CD1015 /* NTRConstants+MultipeerExtensions.m */; };
 		9C7C8B2C18F6DC7200E88754 /* NTRTweaconsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C7C8B2B18F6DC7200E88754 /* NTRTweaconsTableViewController.m */; };
 		9C7C8B2F18F6E1D600E88754 /* NTRTwitterWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C7C8B2E18F6E1D600E88754 /* NTRTwitterWebViewController.m */; };
+		FA05BDBF19047B6C008CEF06 /* NTRTweaconTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FA05BDBE19047B6C008CEF06 /* NTRTweaconTableViewCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -134,6 +135,8 @@
 		9C7C8B2B18F6DC7200E88754 /* NTRTweaconsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NTRTweaconsTableViewController.m; sourceTree = "<group>"; };
 		9C7C8B2D18F6E1D600E88754 /* NTRTwitterWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NTRTwitterWebViewController.h; sourceTree = "<group>"; };
 		9C7C8B2E18F6E1D600E88754 /* NTRTwitterWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NTRTwitterWebViewController.m; sourceTree = "<group>"; };
+		FA05BDBD19047B6C008CEF06 /* NTRTweaconTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NTRTweaconTableViewCell.h; sourceTree = "<group>"; };
+		FA05BDBE19047B6C008CEF06 /* NTRTweaconTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NTRTweaconTableViewCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -287,6 +290,7 @@
 			isa = PBXGroup;
 			children = (
 				9C5199E718F095F800CD1015 /* storyboards */,
+				FA05BDBC19047B35008CEF06 /* TableViewCells */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -399,6 +403,15 @@
 				9C519AFC18F5989200CD1015 /* NTRConstants+MultipeerExtensions.m */,
 			);
 			name = "Multipeer Connectivity";
+			sourceTree = "<group>";
+		};
+		FA05BDBC19047B35008CEF06 /* TableViewCells */ = {
+			isa = PBXGroup;
+			children = (
+				FA05BDBD19047B6C008CEF06 /* NTRTweaconTableViewCell.h */,
+				FA05BDBE19047B6C008CEF06 /* NTRTweaconTableViewCell.m */,
+			);
+			name = TableViewCells;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -544,6 +557,7 @@
 				9C519A5618F0BD1C00CD1015 /* TWSignedRequest.m in Sources */,
 				9C519A6418F0BDD200CD1015 /* OAuthCore.m in Sources */,
 				9C519A5518F0BD1C00CD1015 /* TWAPIManager.m in Sources */,
+				FA05BDBF19047B6C008CEF06 /* NTRTweaconTableViewCell.m in Sources */,
 				9C519A6B18F0CE8300CD1015 /* FHSTwitterEngine.m in Sources */,
 				9C519A6318F0BDD200CD1015 /* OAuth+Additions.m in Sources */,
 				9C519A5918F0BD2700CD1015 /* PFTwitterUtils+NativeTwitter.m in Sources */,
