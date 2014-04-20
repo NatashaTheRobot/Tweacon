@@ -51,13 +51,7 @@ static NTRNearbyServicesManager *nearbyServicesManager;
 - (void)advertiseUser
 {
     if (self.user) {
-        NSMutableDictionary *discoveryInfo = [NSMutableDictionary dictionaryWithCapacity:2];
-        if (self.user[@"imageURL"]) {
-            discoveryInfo[@"imageURL"] = self.user[@"imageURL"];
-        }
-        if (self.user[@"profileDescription"]) {
-            discoveryInfo[@"profileDescription"] = self.user[@"profileDescription"];
-        }
+        NSDictionary *discoveryInfo = @{@"userId" : self.user.objectId};
         self.advertiser = [[MCNearbyServiceAdvertiser alloc] initWithPeer:self.peerId discoveryInfo:discoveryInfo serviceType:@"Tweacon"];
         self.advertiser.delegate = self;
         [self.advertiser startAdvertisingPeer];
@@ -98,15 +92,15 @@ didReceiveInvitationFromPeer:(MCPeerID *)peerID
     if ([nearbyUsers count] > 0) {
        nearbyUser = nearbyUsers[0];
     }
-    if ([peerID.displayName isEqualToString:self.user[@"screenName"]] && ![nearbyUser.screenName isEqualToString:peerID.displayName]) {
-        
-        NTRUser *user = [NTRUser new];
-        user.screenName = peerID.displayName;
-        user.imageURL = info[@"imageURL"];
-        user.profileDescription = info[@"profileDescription"];
-        
-        [self.nearbyUsers addObject:user];
-        [[NSNotificationCenter defaultCenter] postNotificationName:NTRNotificationMultipeerConnectivityUserAdded object:nil];
+    if ([peerID.displayName isEqualToString:self.user[@"screenName"]])
+//        && ![nearbyUser.screenName isEqualToString:peerID.displayName])
+    {
+        PFQuery *userQuery = [NTRUser query];
+        [userQuery getObjectInBackgroundWithId:info[@"userId"] block:^(PFObject *object, NSError *error) {
+            NTRUser *user = (NTRUser *)object;
+            [self.nearbyUsers addObject:user];
+            [[NSNotificationCenter defaultCenter] postNotificationName:NTRNotificationMultipeerConnectivityUserAdded object:nil];
+        }];
     }
 }
 
