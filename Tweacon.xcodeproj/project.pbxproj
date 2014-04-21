@@ -54,6 +54,7 @@
 		9C7C8B2C18F6DC7200E88754 /* NTRTweaconsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C7C8B2B18F6DC7200E88754 /* NTRTweaconsTableViewController.m */; };
 		9C7C8B2F18F6E1D600E88754 /* NTRTwitterWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C7C8B2E18F6E1D600E88754 /* NTRTwitterWebViewController.m */; };
 		FA05BDBF19047B6C008CEF06 /* NTRTweaconTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FA05BDBE19047B6C008CEF06 /* NTRTweaconTableViewCell.m */; };
+		FA05BDC3190493A8008CEF06 /* UIImage+NTRImageEffects.m in Sources */ = {isa = PBXBuildFile; fileRef = FA05BDC2190493A8008CEF06 /* UIImage+NTRImageEffects.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -137,6 +138,8 @@
 		9C7C8B2E18F6E1D600E88754 /* NTRTwitterWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NTRTwitterWebViewController.m; sourceTree = "<group>"; };
 		FA05BDBD19047B6C008CEF06 /* NTRTweaconTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NTRTweaconTableViewCell.h; sourceTree = "<group>"; };
 		FA05BDBE19047B6C008CEF06 /* NTRTweaconTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NTRTweaconTableViewCell.m; sourceTree = "<group>"; };
+		FA05BDC1190493A8008CEF06 /* UIImage+NTRImageEffects.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+NTRImageEffects.h"; sourceTree = "<group>"; };
+		FA05BDC2190493A8008CEF06 /* UIImage+NTRImageEffects.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+NTRImageEffects.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -235,6 +238,7 @@
 				9C5199DF18F0792900CD1015 /* Views */,
 				9C5199E018F07B6A00CD1015 /* Models */,
 				9C5199EE18F09B3F00CD1015 /* Networking */,
+				FA05BDC01904938C008CEF06 /* Categories */,
 				9C519AF818F58D1600CD1015 /* Helpers */,
 				9C5199A318F04CD000CD1015 /* Images.xcassets */,
 				9C5199EB18F0972100CD1015 /* Vendors */,
@@ -414,6 +418,15 @@
 			name = TableViewCells;
 			sourceTree = "<group>";
 		};
+		FA05BDC01904938C008CEF06 /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				FA05BDC1190493A8008CEF06 /* UIImage+NTRImageEffects.h */,
+				FA05BDC2190493A8008CEF06 /* UIImage+NTRImageEffects.m */,
+			);
+			name = Categories;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -571,6 +584,7 @@
 				9C519A6218F0BDD200CD1015 /* NSData+Base64.m in Sources */,
 				9C519A6E18F0CF2100CD1015 /* FHSStream.m in Sources */,
 				9C5199F418F0A20D00CD1015 /* NTRConstants+TwitterClientExtensions.m in Sources */,
+				FA05BDC3190493A8008CEF06 /* UIImage+NTRImageEffects.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -77,6 +77,13 @@
     return cell;
 }
 
+#pragma mark - UITableView Delegate
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return 100.0f;
+}
+
 #pragma mark - Private Configurations Methods
 
 - (void)registerForNotifications

@@ -9,6 +9,7 @@
 #import "NTRTweaconTableViewCell.h"
 #import "NTRUser.h"
 #import <SDWebImage/UIImageView+WebCache.h>
+#import "UIImage+NTRImageEffects.h"
 
 @interface NTRTweaconTableViewCell ()
 
@@ -45,9 +46,15 @@
      {
          if (image)
          {
-             weakSelf.backgroundColor = [UIColor colorWithPatternImage:image];
+             weakSelf.backgroundColor = [UIColor colorWithPatternImage:[image applyDarkEffect]];
          }
      }];
+    
+    UIView *lineView = [[UIView alloc] initWithFrame:CGRectMake(0, self.frame.size.height - 2.0, self.frame.size.width, 2)];
+    
+    lineView.backgroundColor = [UIColor blackColor];
+    lineView.alpha = 0.35;
+    [self addSubview:lineView];
 }
 
 @end

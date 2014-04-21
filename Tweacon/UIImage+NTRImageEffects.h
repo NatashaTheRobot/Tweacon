@@ -6,8 +6,8 @@
 //  Copyright (c) 2014 NatashaTheRobot. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
-
 @interface UIImage (NTRImageEffects)
+
+- (UIImage *)applyDarkEffect;
 
 @end
