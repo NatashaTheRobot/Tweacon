@@ -16,6 +16,8 @@
 @property (strong, nonatomic) NSString *backgroundImageURL;
 @property (strong, nonatomic) NSString *profileImageBackgroundURL;
 
+- (void)addRecentlyNearbyUser:(NTRUser *)user;
+
 - (void)configureWithData:(NSDictionary *)data;
 
 @end

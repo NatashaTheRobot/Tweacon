@@ -14,12 +14,13 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    [NTRUser registerSubclass];
     [Parse setApplicationId:NTR_PARSE_APPLICATION_ID
                   clientKey:NTR_PARSE_CLIENT_KEY];
     [PFAnalytics trackAppOpenedWithLaunchOptions:launchOptions];
-    [NTRUser registerSubclass];
     
-    if ([PFUser currentUser]) {
+    
+    if ([NTRUser currentUser]) {
         [[NTRNearbyServicesManager sharedManager] start];
     } else {
         UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];

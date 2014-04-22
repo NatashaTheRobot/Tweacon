@@ -35,8 +35,15 @@
                                      weakSelf.profileImageView.layer.cornerRadius = image.size.width / 4;
                                  }];
     
+    NSString *backgroundImageURLString;
+    if (userData.backgroundImageURL && ![userData.backgroundImageURL isEqualToString:@""]) {
+        backgroundImageURLString = userData.backgroundImageURL;
+    } else {
+        backgroundImageURLString = userData.profileImageBackgroundURL;
+    }
+    
     SDWebImageManager *manager = [SDWebImageManager sharedManager];
-    [manager downloadWithURL:[NSURL URLWithString:userData.backgroundImageURL]
+    [manager downloadWithURL:[NSURL URLWithString:backgroundImageURLString]
                      options:0
                     progress:^(NSInteger receivedSize, NSInteger expectedSize)
      {

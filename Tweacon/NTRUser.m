@@ -29,8 +29,17 @@
     self.profileDescription = data[@"description"];
     self.imageURL = [data[@"profile_image_url_https"] stringByReplacingOccurrencesOfString:@"_normal" withString:@"_bigger"];
     self.location = data[@"location"];
-    self.backgroundImageURL = [NSString stringWithFormat:@"%@/mobile_retina", data[@"profile_banner_url"]];
+    if (data[@"profile_banner_url"]) {
+        self.backgroundImageURL = [NSString stringWithFormat:@"%@/mobile_retina", data[@"profile_banner_url"]];
+    }
     self.profileImageBackgroundURL = data[@"profile_background_image_url_https"];
+}
+
+- (void)addRecentlyNearbyUser:(NTRUser *)user
+{
+    PFRelation *recentlyNearbyUsersRelation = [self relationForKey:@"recentlyNearbyUsersRelation"];
+    [recentlyNearbyUsersRelation addObject:user];
+    [self saveEventually];
 }
 
 @end

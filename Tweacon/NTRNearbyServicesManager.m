@@ -7,7 +7,7 @@
 //
 
 #import "NTRNearbyServicesManager.h"
-#import <MultipeerConnectivity/MultipeerConnectivity.h>
+@import MultipeerConnectivity;
 #import "NTRUser.h"
 
 @interface NTRNearbyServicesManager () <MCNearbyServiceAdvertiserDelegate, MCNearbyServiceBrowserDelegate>
@@ -61,7 +61,7 @@ static NTRNearbyServicesManager *nearbyServicesManager;
 - (void)browseForUsers
 {
     NTRUser *user = [NTRUser currentUser];
-    MCPeerID *browserId = [[MCPeerID alloc] initWithDisplayName:user[@"screenName"]];
+    MCPeerID *browserId = [[MCPeerID alloc] initWithDisplayName:user.screenName];
     self.browser = [[MCNearbyServiceBrowser alloc] initWithPeer:browserId serviceType:@"Tweacon"];
     self.browser.delegate = self;
     [self.browser startBrowsingForPeers];
@@ -92,14 +92,17 @@ didReceiveInvitationFromPeer:(MCPeerID *)peerID
     if ([nearbyUsers count] > 0) {
        nearbyUser = nearbyUsers[0];
     }
-    if ([peerID.displayName isEqualToString:self.user[@"screenName"]])
-//        && ![nearbyUser.screenName isEqualToString:peerID.displayName])
+    if (![peerID.displayName isEqualToString:self.user.screenName]
+        && ![nearbyUser.screenName isEqualToString:peerID.displayName])
     {
         PFQuery *userQuery = [NTRUser query];
-        [userQuery getObjectInBackgroundWithId:info[@"userId"] block:^(PFObject *object, NSError *error) {
-            NTRUser *user = (NTRUser *)object;
-            [self.nearbyUsers addObject:user];
-            [[NSNotificationCenter defaultCenter] postNotificationName:NTRNotificationMultipeerConnectivityUserAdded object:nil];
+        __weak NTRNearbyServicesManager *weakSelf = self;
+        [userQuery getObjectInBackgroundWithId:info[@"userId"]
+                                         block:^(PFObject *object, NSError *error) {
+                                             NTRUser *user = (NTRUser *)object;
+                                             [weakSelf.nearbyUsers addObject:user];
+                                             [weakSelf.user addRecentlyNearbyUser:user];
+                                             [[NSNotificationCenter defaultCenter] postNotificationName:NTRNotificationMultipeerConnectivityUserAdded object:nil];
         }];
     }
 }
@@ -132,7 +135,7 @@ didReceiveInvitationFromPeer:(MCPeerID *)peerID
 - (MCPeerID *)peerId
 {
     if (!_peerId) {
-        self.peerId = [[MCPeerID alloc] initWithDisplayName:self.user[@"screenName"]];
+        self.peerId = [[MCPeerID alloc] initWithDisplayName:self.user.screenName];
     }
     return _peerId;
 }
