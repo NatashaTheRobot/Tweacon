@@ -36,6 +36,12 @@
     [super viewDidLoad];
     
     [SVProgressHUD showWithStatus:@"Searching for Tweacons..." maskType:SVProgressHUDMaskTypeGradient];
+    
+    CGRect frame = self.tableView.bounds;
+    frame.origin.y = -frame.size.height;
+    UIView *blueView = [[UIView alloc] initWithFrame:frame];
+    blueView.backgroundColor = [UIColor colorWithRed:60/255.0 green:168/255.0 blue:233/255.0 alpha:1];
+    [self.tableView addSubview:blueView];
 }
 
 - (void)dealloc
