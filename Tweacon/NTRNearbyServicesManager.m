@@ -57,9 +57,23 @@ static NTRNearbyServicesManager *nearbyServicesManager;
 - (void)advertiseUser
 {
     if (self.user) {
-        NSDictionary *discoveryInfo = @{@"userId" : self.user.objectId};
+        
+        NSDictionary *discoveryInfo = @{@"userId" : self.user.objectId,
+                                        @"screenName" : self.user.screenName,
+                                        @"name" : self.user.name,
+                                        @"imageURL" : self.user.imageURL};
+        
+        NSMutableDictionary *additionalDiscoveryInfo = [NSMutableDictionary dictionaryWithDictionary:discoveryInfo];
+        if (self.user.backgroundImageURL) {
+            additionalDiscoveryInfo[@"backgroundImageURL"] = self.user.backgroundImageURL;
+        }
+        
+        if (self.user.profileImageBackgroundURL) {
+            additionalDiscoveryInfo[@"profileImageBackgroundURL"] = self.user.profileImageBackgroundURL;
+        }
+        
         self.advertiser = [[MCNearbyServiceAdvertiser alloc] initWithPeer:self.peerId
-                                                            discoveryInfo:discoveryInfo serviceType:@"Tweacon"];
+                                                            discoveryInfo:[additionalDiscoveryInfo copy] serviceType:@"Tweacon"];
         self.advertiser.delegate = self;
         [self.advertiser startAdvertisingPeer];
     }
@@ -101,21 +115,20 @@ didReceiveInvitationFromPeer:(MCPeerID *)peerID
        nearbyUser = nearbyUsers[0];
     }
     
-    BOOL isSameAsUser = [peerID.displayName caseInsensitiveCompare:self.user.screenName] == NSOrderedSame;
-    BOOL isSameAsExistingNearbyUser = [peerID.displayName caseInsensitiveCompare:nearbyUser.screenName] == NSOrderedSame;
+    BOOL isSameAsUser = [peerID.displayName isEqualToString:self.user.screenName];
+    BOOL isSameAsExistingNearbyUser = [peerID.displayName isEqualToString:nearbyUser.screenName];
+    
     if (!isSameAsUser && !isSameAsExistingNearbyUser)
     {
-        PFQuery *userQuery = [NTRUser query];
-        __weak NTRNearbyServicesManager *weakSelf = self;
-        [userQuery getObjectInBackgroundWithId:info[@"userId"]
-                                         block:^(PFObject *object, NSError *error) {
-                                             if (object) {
-                                                 NTRUser *user = (NTRUser *)object;
-                                                 [weakSelf.nearbyUsers addObject:user];
-                                                 [weakSelf.user addRecentlyNearbyUser:user];
-                                                 [[NSNotificationCenter defaultCenter] postNotificationName:NTRNotificationMultipeerConnectivityUserAdded object:nil];
-                                             }
-        }];
+        NTRUser *user = [NTRUser new];
+        user.objectId = info[@"userId"];
+        user.screenName = info[@"screenName"];
+        user.name = info[@"name"];
+        user.imageURL = info[@"imageURL"];
+        user.backgroundImageURL = info[@"backgroundImageURL"];
+        user.profileImageBackgroundURL = info[@"profileImageBackgroundURL"];
+        [self.nearbyUsers addObject:user];
+        [[NSNotificationCenter defaultCenter] postNotificationName:NTRNotificationMultipeerConnectivityUserAdded object:nil];
     }
 }
 
