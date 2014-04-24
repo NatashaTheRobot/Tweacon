@@ -15,5 +15,6 @@
 @property (strong, nonatomic, readonly) NSMutableArray *nearbyUsers;
 
 - (void)start;
+- (void)clear;
 
 @end

@@ -46,13 +46,20 @@ static NTRNearbyServicesManager *nearbyServicesManager;
     [self browseForUsers];
 }
 
+- (void)clear
+{
+    [self.nearbyUsers removeAllObjects];
+    [[NSNotificationCenter defaultCenter] postNotificationName:NTRNotificationMultipeerConnectivityUserRemoved object:nil];
+}
+
 #pragma mark - Private Methods
 
 - (void)advertiseUser
 {
     if (self.user) {
         NSDictionary *discoveryInfo = @{@"userId" : self.user.objectId};
-        self.advertiser = [[MCNearbyServiceAdvertiser alloc] initWithPeer:self.peerId discoveryInfo:discoveryInfo serviceType:@"Tweacon"];
+        self.advertiser = [[MCNearbyServiceAdvertiser alloc] initWithPeer:self.peerId
+                                                            discoveryInfo:discoveryInfo serviceType:@"Tweacon"];
         self.advertiser.delegate = self;
         [self.advertiser startAdvertisingPeer];
     }
@@ -87,22 +94,27 @@ didReceiveInvitationFromPeer:(MCPeerID *)peerID
 - (void)browser:(MCNearbyServiceBrowser *)browser foundPeer:(MCPeerID *)peerID withDiscoveryInfo:(NSDictionary *)info
 {
     NSPredicate *filter = [NSPredicate predicateWithFormat:@"screenName = %@", peerID.displayName];
+    
     NSArray *nearbyUsers = [self.nearbyUsers filteredArrayUsingPredicate:filter];
     NTRUser *nearbyUser;
     if ([nearbyUsers count] > 0) {
        nearbyUser = nearbyUsers[0];
     }
-    if (![peerID.displayName isEqualToString:self.user.screenName]
-        && ![nearbyUser.screenName isEqualToString:peerID.displayName])
+    
+    BOOL isSameAsUser = [peerID.displayName caseInsensitiveCompare:self.user.screenName] == NSOrderedSame;
+    BOOL isSameAsExistingNearbyUser = [peerID.displayName caseInsensitiveCompare:nearbyUser.screenName] == NSOrderedSame;
+    if (!isSameAsUser && !isSameAsExistingNearbyUser)
     {
         PFQuery *userQuery = [NTRUser query];
         __weak NTRNearbyServicesManager *weakSelf = self;
         [userQuery getObjectInBackgroundWithId:info[@"userId"]
                                          block:^(PFObject *object, NSError *error) {
-                                             NTRUser *user = (NTRUser *)object;
-                                             [weakSelf.nearbyUsers addObject:user];
-                                             [weakSelf.user addRecentlyNearbyUser:user];
-                                             [[NSNotificationCenter defaultCenter] postNotificationName:NTRNotificationMultipeerConnectivityUserAdded object:nil];
+                                             if (object) {
+                                                 NTRUser *user = (NTRUser *)object;
+                                                 [weakSelf.nearbyUsers addObject:user];
+                                                 [weakSelf.user addRecentlyNearbyUser:user];
+                                                 [[NSNotificationCenter defaultCenter] postNotificationName:NTRNotificationMultipeerConnectivityUserAdded object:nil];
+                                             }
         }];
     }
 }
